@@ -1,0 +1,598 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:03 on Apr 07,2025
+# vlog -reportprogress 300 ./mux2_1.sv 
+# ** Error: (vlog-7) Failed to open design unit file "./mux2_1.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 21:16:03 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./mux2_1.sv""
+
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:16:39 on Apr 07,2025
+# vlog -reportprogress 300 ./mux2_1.sv 
+# ** Error: (vlog-7) Failed to open design unit file "./mux2_1.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 21:16:39 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./mux2_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:18:38 on Apr 07,2025
+# vlog -reportprogress 300 ./mux2_1.sv 
+# ** Error: (vlog-7) Failed to open design unit file "./mux2_1.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 21:18:38 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./mux2_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:21:17 on Apr 07,2025
+# vlog -reportprogress 300 ./mux2_1.sv 
+# ** Error: (vlog-7) Failed to open design unit file "./mux2_1.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 21:21:17 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./mux2_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:23:07 on Apr 07,2025
+# vlog -reportprogress 300 ./mux2_1.sv 
+# ** Error: (vlog-7) Failed to open design unit file "./mux2_1.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 21:23:07 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./mux2_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:29:53 on Apr 07,2025
+# vlog -reportprogress 300 ./mux2_1.sv 
+# ** Error: (vlog-7) Failed to open design unit file "./mux2_1.sv" in read mode.
+# No such file or directory. (errno = ENOENT)
+# End time: 21:29:53 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./runlab.do line 7
+# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog "./mux2_1.sv""
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:31:37 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder_tb.sv 
+# -- Compiling module fullAdder_tb
+# 
+# Top level modules:
+# 	fullAdder_tb
+# End time: 21:31:37 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:31:37 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1_tb.sv 
+# -- Compiling module hw1p1_tb
+# 
+# Top level modules:
+# 	hw1p1_tb
+# End time: 21:31:38 on Apr 07,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:31:38 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2_tb.sv 
+# -- Compiling module hw1p2_tb
+# 
+# Top level modules:
+# 	hw1p2_tb
+# End time: 21:31:38 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work hw1p1_tb 
+# Start time: 21:31:39 on Apr 07,2025
+# Loading sv_std.std
+# Loading work.hw1p1_tb
+# ** Error: (vsim-3033) hw1p1_tb.sv(9): Instantiation of 'hw1p1' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /hw1p1_tb File: hw1p1_tb.sv
+#         Searched libraries:
+#             C:/Users/Egghead/OneDrive - UW/Desktop/hw1/work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 14
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:33:01 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder_tb.sv 
+# -- Compiling module fullAdder_tb
+# 
+# Top level modules:
+# 	fullAdder_tb
+# End time: 21:33:01 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:33:02 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1_tb.sv 
+# -- Compiling module hw1p1_tb
+# 
+# Top level modules:
+# 	hw1p1_tb
+# End time: 21:33:02 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:33:02 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2_tb.sv 
+# -- Compiling module hw1p2_tb
+# 
+# Top level modules:
+# 	hw1p2_tb
+# End time: 21:33:02 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work hw1p1_tb 
+# Start time: 21:31:39 on Apr 07,2025
+# Loading sv_std.std
+# Loading work.hw1p1_tb
+# ** Error: (vsim-3033) hw1p1_tb.sv(9): Instantiation of 'hw1p1' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /hw1p1_tb File: hw1p1_tb.sv
+#         Searched libraries:
+#             C:/Users/Egghead/OneDrive - UW/Desktop/hw1/work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 14
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:32 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder_tb.sv 
+# -- Compiling module fullAdder_tb
+# 
+# Top level modules:
+# 	fullAdder_tb
+# End time: 21:34:32 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:32 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1.sv 
+# -- Compiling module hw1p1
+# 
+# Top level modules:
+# 	hw1p1
+# End time: 21:34:32 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:32 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2.sv 
+# -- Compiling module hw1p2
+# 
+# Top level modules:
+# 	hw1p2
+# End time: 21:34:32 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:32 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1_tb.sv 
+# -- Compiling module hw1p1_tb
+# 
+# Top level modules:
+# 	hw1p1_tb
+# End time: 21:34:32 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:32 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2_tb.sv 
+# -- Compiling module hw1p2_tb
+# 
+# Top level modules:
+# 	hw1p2_tb
+# End time: 21:34:32 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work hw1p1_tb 
+# Start time: 21:31:39 on Apr 07,2025
+# Loading sv_std.std
+# Loading work.hw1p1_tb
+# Loading work.hw1p1
+# ** Error: (vsim-3033) hw1p1.sv(12): Instantiation of 'fullAdder' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /hw1p1_tb/dut File: hw1p1.sv
+#         Searched libraries:
+#             C:/Users/Egghead/OneDrive - UW/Desktop/hw1/work
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 16
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:47 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder_tb.sv 
+# -- Compiling module fullAdder_tb
+# 
+# Top level modules:
+# 	fullAdder_tb
+# End time: 21:34:47 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:47 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder.sv 
+# -- Compiling module fullAdder
+# 
+# Top level modules:
+# 	fullAdder
+# End time: 21:34:47 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:47 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1.sv 
+# -- Compiling module hw1p1
+# 
+# Top level modules:
+# 	hw1p1
+# End time: 21:34:47 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:47 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2.sv 
+# -- Compiling module hw1p2
+# 
+# Top level modules:
+# 	hw1p2
+# End time: 21:34:47 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:47 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1_tb.sv 
+# -- Compiling module hw1p1_tb
+# 
+# Top level modules:
+# 	hw1p1_tb
+# End time: 21:34:47 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:34:47 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2_tb.sv 
+# -- Compiling module hw1p2_tb
+# 
+# Top level modules:
+# 	hw1p2_tb
+# End time: 21:34:47 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work hw1p1_tb 
+# Start time: 21:31:39 on Apr 07,2025
+# Loading sv_std.std
+# Loading work.hw1p1_tb
+# Loading work.hw1p1
+# Loading work.fullAdder
+# ** Error: (vsim-3063) hw1p1.sv(12): Port 'count' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /hw1p1_tb/dut/adderhw1 File: fullAdder.sv
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 17
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:37:36 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder_tb.sv 
+# -- Compiling module fullAdder_tb
+# 
+# Top level modules:
+# 	fullAdder_tb
+# End time: 21:37:36 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:37:36 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder.sv 
+# -- Compiling module fullAdder
+# 
+# Top level modules:
+# 	fullAdder
+# End time: 21:37:36 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:37:37 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1.sv 
+# -- Compiling module hw1p1
+# 
+# Top level modules:
+# 	hw1p1
+# End time: 21:37:37 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:37:37 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2.sv 
+# -- Compiling module hw1p2
+# 
+# Top level modules:
+# 	hw1p2
+# End time: 21:37:37 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:37:37 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1_tb.sv 
+# -- Compiling module hw1p1_tb
+# 
+# Top level modules:
+# 	hw1p1_tb
+# End time: 21:37:37 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:37:37 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2_tb.sv 
+# -- Compiling module hw1p2_tb
+# 
+# Top level modules:
+# 	hw1p2_tb
+# End time: 21:37:37 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work hw1p1_tb 
+# Start time: 21:31:39 on Apr 07,2025
+# Loading sv_std.std
+# Loading work.hw1p1_tb
+# Loading work.hw1p1
+# Loading work.fullAdder
+# ** Error: (vsim-3063) hw1p1.sv(12): Port 'count' not found in the connected module (5th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /hw1p1_tb/dut/adderhw1 File: fullAdder.sv
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 17
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:57 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder_tb.sv 
+# -- Compiling module fullAdder_tb
+# 
+# Top level modules:
+# 	fullAdder_tb
+# End time: 21:38:57 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:57 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder.sv 
+# -- Compiling module fullAdder
+# 
+# Top level modules:
+# 	fullAdder
+# End time: 21:38:58 on Apr 07,2025, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:58 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1.sv 
+# -- Compiling module hw1p1
+# 
+# Top level modules:
+# 	hw1p1
+# End time: 21:38:58 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:58 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2.sv 
+# -- Compiling module hw1p2
+# 
+# Top level modules:
+# 	hw1p2
+# End time: 21:38:58 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:58 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1_tb.sv 
+# -- Compiling module hw1p1_tb
+# 
+# Top level modules:
+# 	hw1p1_tb
+# End time: 21:38:58 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:38:58 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2_tb.sv 
+# -- Compiling module hw1p2_tb
+# 
+# Top level modules:
+# 	hw1p2_tb
+# End time: 21:38:58 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work hw1p1_tb 
+# Start time: 21:31:39 on Apr 07,2025
+# Loading sv_std.std
+# Loading work.hw1p1_tb
+# Loading work.hw1p1
+# Loading work.fullAdder
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/clk'.
+# Executing ONERROR command at macro ./wave.do line 5
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/reset'.
+# Executing ONERROR command at macro ./wave.do line 6
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/x'.
+# Executing ONERROR command at macro ./wave.do line 7
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/y'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/s'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/Q'.
+# Executing ONERROR command at macro ./wave.do line 10
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/fullAdder/a'.
+# Executing ONERROR command at macro ./wave.do line 11
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/fullAdder/b'.
+# Executing ONERROR command at macro ./wave.do line 12
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/fullAdder/cin'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/fullAdder/sum'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p1/fullAdder/count'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p2/clk'.
+# Executing ONERROR command at macro ./wave.do line 18
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p2/reset'.
+# Executing ONERROR command at macro ./wave.do line 19
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p2/in'.
+# Executing ONERROR command at macro ./wave.do line 20
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p2/out'.
+# Executing ONERROR command at macro ./wave.do line 21
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p2/ps'.
+# Executing ONERROR command at macro ./wave.do line 22
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/dut/hw1p2/ns'.
+# Executing ONERROR command at macro ./wave.do line 23
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/HEX0'.
+# Executing ONERROR command at macro ./wave.do line 26
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/HEX1'.
+# Executing ONERROR command at macro ./wave.do line 27
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/HEX2'.
+# Executing ONERROR command at macro ./wave.do line 28
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/HEX3'.
+# Executing ONERROR command at macro ./wave.do line 29
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/HEX4'.
+# Executing ONERROR command at macro ./wave.do line 30
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/HEX5'.
+# Executing ONERROR command at macro ./wave.do line 31
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/GPIO_0[1]'.
+# Executing ONERROR command at macro ./wave.do line 32
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/GPIO_0[0]'.
+# Executing ONERROR command at macro ./wave.do line 33
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/KEY[1]'.
+# Executing ONERROR command at macro ./wave.do line 34
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/KEY[0]'.
+# Executing ONERROR command at macro ./wave.do line 35
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/SW[0]'.
+# Executing ONERROR command at macro ./wave.do line 36
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_testbench/clk'.
+# Executing ONERROR command at macro ./wave.do line 37
+# ** Note: $stop    : hw1p1_tb.sv(33)
+#    Time: 475 ps  Iteration: 1  Instance: /hw1p1_tb
+# Break in Module hw1p1_tb at hw1p1_tb.sv line 33
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:41:25 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder_tb.sv 
+# -- Compiling module fullAdder_tb
+# 
+# Top level modules:
+# 	fullAdder_tb
+# End time: 21:41:25 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:41:25 on Apr 07,2025
+# vlog -reportprogress 300 fullAdder.sv 
+# -- Compiling module fullAdder
+# 
+# Top level modules:
+# 	fullAdder
+# End time: 21:41:25 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:41:25 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1.sv 
+# -- Compiling module hw1p1
+# 
+# Top level modules:
+# 	hw1p1
+# End time: 21:41:25 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:41:25 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2.sv 
+# -- Compiling module hw1p2
+# 
+# Top level modules:
+# 	hw1p2
+# End time: 21:41:25 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:41:25 on Apr 07,2025
+# vlog -reportprogress 300 hw1p1_tb.sv 
+# -- Compiling module hw1p1_tb
+# 
+# Top level modules:
+# 	hw1p1_tb
+# End time: 21:41:25 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:41:25 on Apr 07,2025
+# vlog -reportprogress 300 hw1p2_tb.sv 
+# -- Compiling module hw1p2_tb
+# 
+# Top level modules:
+# 	hw1p2_tb
+# End time: 21:41:25 on Apr 07,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 21:41:30 on Apr 07,2025, Elapsed time: 0:09:51
+# Errors: 92, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps -lib work hw1p1_tb 
+# Start time: 21:41:30 on Apr 07,2025
+# Loading sv_std.std
+# Loading work.hw1p1_tb
+# Loading work.hw1p1
+# Loading work.fullAdder
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/clk'.
+# Executing ONERROR command at macro ./wave.do line 5
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/reset'.
+# Executing ONERROR command at macro ./wave.do line 6
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/x'.
+# Executing ONERROR command at macro ./wave.do line 7
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/y'.
+# Executing ONERROR command at macro ./wave.do line 8
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/s'.
+# Executing ONERROR command at macro ./wave.do line 9
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/Q'.
+# Executing ONERROR command at macro ./wave.do line 10
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/fullAdder/a'.
+# Executing ONERROR command at macro ./wave.do line 11
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/fullAdder/b'.
+# Executing ONERROR command at macro ./wave.do line 12
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/fullAdder/cin'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/fullAdder/sum'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/hw1p1_tb/dut/hw1p1/fullAdder/count'.
+# Executing ONERROR command at macro ./wave.do line 15
+# ** Error: (vish-4014) No objects found matching '/hw1p2_tb/dut/hw1p2/clk'.
+# Executing ONERROR command at macro ./wave.do line 18
+# ** Error: (vish-4014) No objects found matching '/hw1p2_tb/dut/hw1p2/reset'.
+# Executing ONERROR command at macro ./wave.do line 19
+# ** Error: (vish-4014) No objects found matching '/hw1p2_tb/dut/hw1p2/in'.
+# Executing ONERROR command at macro ./wave.do line 20
+# ** Error: (vish-4014) No objects found matching '/hw1p2_tb/dut/hw1p2/out'.
+# Executing ONERROR command at macro ./wave.do line 21
+# ** Error: (vish-4014) No objects found matching '/hw1p2_tb/dut/hw1p2/ps'.
+# Executing ONERROR command at macro ./wave.do line 22
+# ** Error: (vish-4014) No objects found matching '/hw1p2_tb/dut/hw1p2/ns'.
+# Executing ONERROR command at macro ./wave.do line 23
+# ** Note: $stop    : hw1p1_tb.sv(33)
+#    Time: 475 ps  Iteration: 1  Instance: /hw1p1_tb
+# Break in Module hw1p1_tb at hw1p1_tb.sv line 33
+add wave -position end  sim:/hw1p1_tb/clk_period
+add wave -position end  sim:/hw1p1_tb/clk
+add wave -position end  sim:/hw1p1_tb/reset
+add wave -position end  sim:/hw1p1_tb/x
+add wave -position end  sim:/hw1p1_tb/y
+add wave -position end  sim:/hw1p1_tb/s
+run -all
+# Break key hit
+# Break in Module hw1p1_tb at hw1p1_tb.sv line 15
+# End time: 21:42:13 on Apr 07,2025, Elapsed time: 0:00:43
+# Errors: 51, Warnings: 0
