@@ -1,7 +1,7 @@
 // A car counter with two control signals, incr and decr, which 
 // increment and decrement the counter, respectively, when asserted
 
-module carCounter(reset, clk, incr, decr)
+module carCounter(reset, clk, incr, decr, out);
 	input logic reset, clk;
 	input logic incr, decr;
 	output logic [4:0] out; //5-bit counter to represent 0-16 vacant parking spots
@@ -9,26 +9,27 @@ module carCounter(reset, clk, incr, decr)
 	// counter changes on the rising edge of clock clk
 	always_ff @(posedge clk) begin
 			  if (reset) begin
-					count <= 5'd0;
+					out <= 5'd0;
 			  end else begin
 					case ({incr, decr})
 						// If parking is not full, increment only
-						 2'b10: if (count < 5'd16) count <= count + 1; // Only incr
+						 2'b10: if (out < 5'd16) out <= out + 1; // Only incr
 						 // if parking is not empy, decrement only
-						 2'b01: if (count > 5'd0)  count <= count - 1; // Only decr
+						 2'b01: if (out > 5'd0)  out <= out - 1; // Only decr
 						 // no change if both incr and decr are 1
-						 default: count <= count; // Default Case: No change or both active
+						 default: out <= out; // Default Case: No change or both active
 					endcase
 			  end
 		 end
 	
-endmodule 
+endmodule // carCounter 
 
-module carCounter_tb()
+// Testbench for carCounter Module
+module carCounter_tb ();
 	logic reset, clk, incr, decr;
 	logic [4:0] out;
 	
-	counter dut (.reset(reset), .clk(clk), .incr(incr), .decr(decr));
+	carCounter dut (.reset(reset), .clk(clk), .incr(incr), .decr(decr), .out(out));
 	
 	parameter CLOCK_PERIOD = 100;
 	initial begin
@@ -36,7 +37,7 @@ module carCounter_tb()
 		forever #(CLOCK_PERIOD/2) clk <= ~clk;
 	end
 	
-    initial begin
+   initial begin
         // Initial conditions
         reset <= 1; incr <= 0; decr <= 0; @(posedge clk);
         reset <= 0; incr <= 0; decr <= 0; @(posedge clk);
@@ -66,5 +67,6 @@ module carCounter_tb()
         reset <= 0; @(posedge clk);
 
         $stop;
+	end
 	
-endmodule 
+endmodule // carCounter_tb
