@@ -1,58 +1,77 @@
-// FSM to detect car entry and exit sequences
-// Alison – EE371 Lab 1
+module carDetection (clk, reset, outer, inner, enter, exit);
+    input  logic clk, reset,
+    input  logic outer, inner,
+    output logic enter, exit
 
-module carDetection (
-  output logic enter, exit,
-  input  logic outer, inner, // photo sensors
-  input  logic clk, reset
-);
+    // FSM states
+    enum logic [1:0] {S0, S1, S2, S3} ps, ns;
 
-  // FSM States
-  typedef enum logic [1:0] {
-    IDLE        = 2'd0, // 00
-    GOING_IN    = 2'd1, // 01
-    BOTH_BLOCK  = 2'd2, // 10
-    GOING_OUT   = 2'd3  // 11
-  } state_t;
+    // Next-state logic
+    always_comb
+        case (ps)
+            S0: if (outer && !inner)       ns = S1;
+                else if (!outer && inner)  ns = S3;
+                else                       ns = S0;
+            S1: if (outer && inner)        ns = S2;
+                else if (!outer)           ns = S0;
+                else                       ns = S1;
+            S2: if (!outer && inner)       ns = S3;
+                else if (outer && !inner)  ns = S1;
+                else                       ns = S2;
+            S3: if (!inner)                ns = S0;
+                else if (outer)            ns = S2;
+                else                       ns = S3;
+        endcase
 
-  state_t ps, ns;
+    // Output logic — one-cycle pulse when returning to S0
+    assign enter = (ps == S3) && (ns == S0);
+    assign exit  = (ps == S1) && (ns == S0);
 
-  // Next-state logic
-  always_comb begin
-    case (ps)
-      IDLE: begin
-        if (outer && !inner) ns = GOING_IN;       // enter starts
-        else if (!outer && inner) ns = GOING_OUT; // exit starts
-        else ns = IDLE;
-      end
-      GOING_IN: begin
-        if (outer && inner) ns = BOTH_BLOCK;
-        else if (!outer && !inner) ns = IDLE; // abort
-        else ns = GOING_IN;
-      end
-      BOTH_BLOCK: begin
-        if (!outer && inner) ns = GOING_OUT;
-        else if (outer && !inner) ns = GOING_IN;
-        else ns = BOTH_BLOCK;
-      end
-      GOING_OUT: begin
-        if (!outer && !inner) ns = IDLE;
-        else ns = GOING_OUT;
-      end
-      default: ns = IDLE;
-    endcase
-  end
+    // Sequential logic for state updates
+    always_ff @(posedge clk)
+        if (reset)
+            ps <= S0;
+        else
+            ps <= ns;
 
-  // Output logic: one-cycle pulse when transitioning from final state to IDLE
-  assign enter = (ps == GOING_IN && ns == IDLE);
-  assign exit  = (ps == GOING_OUT && ns == IDLE);
+endmodule // carDetection
 
-  // State update
-  always_ff @(posedge clk) begin
-    if (reset)
-      ps <= IDLE;
-    else
-      ps <= ns;
-  end
 
-endmodule
+
+module carDetection_tb ();
+	logic clk, reset, outer, inner, enter, exit;
+	
+	carDetection dut (.clk(clk), .reset(reset), .outer(outer), .inner(inner), .enter(enter), .exit(exit));
+	
+	parameter CLOCK_PERIOD = 100;
+    initial begin
+        clk <= 0;
+        forever #(CLOCK_PERIOD/2) clk <= ~clk;
+    end
+
+    // Stimulus
+    initial begin
+        // Initial conditions
+        reset <= 1; outer <= 0; inner <= 0; @(posedge clk);
+        reset <= 0;                             @(posedge clk);
+
+        // === Simulate a car entering ===
+        outer <= 1; inner <= 0; @(posedge clk); // outer blocked
+        outer <= 1; inner <= 1; @(posedge clk); // both blocked
+        outer <= 0; inner <= 1; @(posedge clk); // inner only
+        outer <= 0; inner <= 0; @(posedge clk); // both clear → enter = 1
+        @(posedge clk);
+
+        // === Simulate a car exiting ===
+        outer <= 0; inner <= 1; @(posedge clk); // inner blocked
+        outer <= 1; inner <= 1; @(posedge clk); // both blocked
+        outer <= 1; inner <= 0; @(posedge clk); // outer only
+        outer <= 0; inner <= 0; @(posedge clk); // both clear → exit = 1
+        @(posedge clk);
+
+        $stop;
+    end
+
+	
+	
+endmodule 
