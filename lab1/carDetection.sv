@@ -1,7 +1,7 @@
 module carDetection (clk, reset, outer, inner, enter, exit);
-    input  logic clk, reset,
-    input  logic outer, inner,
-    output logic enter, exit
+    input  logic clk, reset;
+    input  logic outer, inner;
+    output logic enter, exit;
 
     // FSM states named after sensor combinations
     enum logic [1:0] {S00, S10, S11, S01} ps, ns;
