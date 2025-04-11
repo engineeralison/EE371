@@ -15,7 +15,7 @@ module DE1_SoC (
     logic reset, outer, inner;
     assign reset = V_GPIO[28];
     assign outer = V_GPIO[24];
-    assign inner = V_GPIO[25];
+    assign inner = V_GPIO[23];
 
     // === GPIO Outputs
     assign V_GPIO[34] = outer; // Light LED when outer == 1
@@ -50,6 +50,7 @@ module DE1_SoC (
 
     // === Display Logic
     always_comb begin
+        // Default all displays to off
         HEX0 = 7'b1111111;
         HEX1 = 7'b1111111;
         HEX2 = 7'b1111111;
@@ -70,12 +71,20 @@ module DE1_SoC (
             HEX3 = 7'b1000111; // L
             HEX2 = 7'b1000111; // L
         end else begin
+            // Optional: blank other digits for clarity
+            HEX2 = 7'b1111111;
+            HEX3 = 7'b1111111;
+            HEX4 = 7'b1111111;
+            HEX5 = 7'b1111111;
+
+            // Tens place
             case (count_internal / 10)
-                0: HEX1 = 7'b1111111;
-                1: HEX1 = 7'b1111001;
+                0: HEX1 = 7'b1111111;    // blank
+                1: HEX1 = 7'b1111001;    // 1
                 default: HEX1 = 7'b1111111;
             endcase
 
+            // Ones place
             case (count_internal % 10)
                 0: HEX0 = 7'b1000000;
                 1: HEX0 = 7'b1111001;
@@ -91,4 +100,5 @@ module DE1_SoC (
             endcase
         end
     end
+
 endmodule
