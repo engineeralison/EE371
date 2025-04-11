@@ -32,51 +32,57 @@ module DE1_SoC_tb();
     );
 
     // Clock generation
-    parameter T = 20;
+    parameter T = 1000;
     initial begin
         CLOCK_50 = 0;
         forever #(T/2) CLOCK_50 = ~CLOCK_50;
     end
 
-		initial begin
-			 V_GPIO_dir = '1; // Default all to inputs
-			 V_GPIO_dir[28] = 0; // reset
-			 V_GPIO_dir[24] = 0; // drive outer sensor
-			 V_GPIO_dir[25] = 0; // drive inner sensor
-			 V_GPIO_dir[34] = 1; // read LED for outer
-			 V_GPIO_dir[35] = 1; // read LED for inner
-		end
-
+    // GPIO Direction Setup
+    initial begin
+        V_GPIO_dir = '1;        // Default all to inputs (high-Z)
+        V_GPIO_dir[28] = 0;     // reset
+        V_GPIO_dir[24] = 0;     // drive outer sensor
+        V_GPIO_dir[23] = 0;     // drive inner sensor
+        V_GPIO_dir[34] = 1;     // read LED for outer
+        V_GPIO_dir[35] = 1;     // read LED for inner
+    end
 
     // Stimulus
     initial begin
-        
-        // === Initial state: no car ===
-        V_GPIO_out[24] = 0;
-        V_GPIO_out[25] = 0;
+        // === Set initial inputs ===
+        V_GPIO_out[24] = 0; // outer
+        V_GPIO_out[23] = 0; // inner
+        V_GPIO_out[28] = 0; // reset low by default
         repeat (2) @(posedge CLOCK_50);
 
+        // === Apply reset pulse ===
+        V_GPIO_out[28] = 1; @(posedge CLOCK_50);
+        V_GPIO_out[28] = 0; @(posedge CLOCK_50);
+
         // === Car enters ===
-        V_GPIO_out[24] = 1; V_GPIO_out[25] = 0; @(posedge CLOCK_50);
-        V_GPIO_out[24] = 1; V_GPIO_out[25] = 1; @(posedge CLOCK_50);
-        V_GPIO_out[24] = 0; V_GPIO_out[25] = 1; @(posedge CLOCK_50);
-        V_GPIO_out[24] = 0; V_GPIO_out[25] = 0; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 1; V_GPIO_out[23] = 0; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 1; V_GPIO_out[23] = 1; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 0; V_GPIO_out[23] = 1; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 0; V_GPIO_out[23] = 0; @(posedge CLOCK_50);
 
         // === Another car enters ===
-        V_GPIO_out[24] = 1; V_GPIO_out[25] = 0; @(posedge CLOCK_50);
-        V_GPIO_out[24] = 1; V_GPIO_out[25] = 1; @(posedge CLOCK_50);
-        V_GPIO_out[24] = 0; V_GPIO_out[25] = 1; @(posedge CLOCK_50);
-        V_GPIO_out[24] = 0; V_GPIO_out[25] = 0; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 1; V_GPIO_out[23] = 0; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 1; V_GPIO_out[23] = 1; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 0; V_GPIO_out[23] = 1; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 0; V_GPIO_out[23] = 0; @(posedge CLOCK_50);
 
         // === Car exits ===
-        V_GPIO_out[24] = 0; V_GPIO_out[25] = 1; @(posedge CLOCK_50);
-        V_GPIO_out[24] = 1; V_GPIO_out[25] = 1; @(posedge CLOCK_50);
-        V_GPIO_out[24] = 1; V_GPIO_out[25] = 0; @(posedge CLOCK_50);
-        V_GPIO_out[24] = 0; V_GPIO_out[25] = 0; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 0; V_GPIO_out[23] = 1; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 1; V_GPIO_out[23] = 1; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 1; V_GPIO_out[23] = 0; @(posedge CLOCK_50);
+        V_GPIO_out[24] = 0; V_GPIO_out[23] = 0; @(posedge CLOCK_50);
+
+        // Optional: wait and observe
+        repeat (5) @(posedge CLOCK_50);
 
         // === Done ===
         $stop;
-		  
     end
-	
-endmodule 
+
+endmodule
