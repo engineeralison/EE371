@@ -3,7 +3,8 @@ module DE1_SoC (
     output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5,
     output logic [9:0]  LEDR,
     inout  logic [35:0] V_GPIO,
-    output logic        enter_out, exit_out,
+    output logic        enter_out,
+    output logic        exit_out,
     output logic [4:0]  count_out
 );
 
@@ -18,8 +19,8 @@ module DE1_SoC (
     assign inner = V_GPIO[23];
 
     // === GPIO Outputs
-    assign V_GPIO[34] = outer; // Light LED when outer == 1
-    assign V_GPIO[35] = inner; // Light LED when inner == 1
+    assign V_GPIO[34] = outer; // mirror to off-board LED
+    assign V_GPIO[35] = inner;
 
     // === Internal signals
     logic enter_internal, exit_internal;
@@ -44,13 +45,13 @@ module DE1_SoC (
         .out(count_internal)
     );
 
+    // === Hook internal signals to outputs for simulation
     assign enter_out = enter_internal;
     assign exit_out  = exit_internal;
     assign count_out = count_internal;
 
     // === Display Logic
     always_comb begin
-        // Default all displays to off
         HEX0 = 7'b1111111;
         HEX1 = 7'b1111111;
         HEX2 = 7'b1111111;
@@ -63,7 +64,7 @@ module DE1_SoC (
             HEX4 = 7'b1000111; // L
             HEX3 = 7'b0000110; // E
             HEX2 = 7'b0001000; // A
-            HEX1 = 7'b0001001; // R
+            HEX1 = 7'b1011111; // r (custom encoding)
             HEX0 = 7'b1000000; // 0
         end else if (count_internal == 5'd16) begin
             HEX5 = 7'b0001110; // F
@@ -71,20 +72,13 @@ module DE1_SoC (
             HEX3 = 7'b1000111; // L
             HEX2 = 7'b1000111; // L
         end else begin
-            // Optional: blank other digits for clarity
-            HEX2 = 7'b1111111;
-            HEX3 = 7'b1111111;
-            HEX4 = 7'b1111111;
-            HEX5 = 7'b1111111;
-
-            // Tens place
+            // Show 2-digit count
             case (count_internal / 10)
-                0: HEX1 = 7'b1111111;    // blank
-                1: HEX1 = 7'b1111001;    // 1
+                0: HEX1 = 7'b1000000; // 0
+                1: HEX1 = 7'b1111001; // 1
                 default: HEX1 = 7'b1111111;
             endcase
 
-            // Ones place
             case (count_internal % 10)
                 0: HEX0 = 7'b1000000;
                 1: HEX0 = 7'b1111001;
