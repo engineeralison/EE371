@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE1_SoC
-Mon Apr 07 21:13:55 2025
+Fri Apr 11 00:24:15 2025
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -10,8 +10,18 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
-  6. Analysis & Synthesis Suppressed Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |DE1_SoC|carDetection:fsm|ps
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0
+ 12. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
+ 13. Post-Synthesis Netlist Statistics for Top Partition
+ 14. Elapsed Time Per Partition
+ 15. Analysis & Synthesis Messages
+ 16. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -35,22 +45,27 @@ agreement for further details.
 
 
 
-+---------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                              ;
-+-----------------------------+---------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Mon Apr 07 21:13:55 2025           ;
-; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
-; Revision Name               ; DE1_SoC                                     ;
-; Top-level Entity Name       ; DE1_SoC                                     ;
-; Family                      ; Cyclone V                                   ;
-; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
-; Total registers             ; N/A until Partition Merge                   ;
-; Total pins                  ; N/A until Partition Merge                   ;
-; Total virtual pins          ; N/A until Partition Merge                   ;
-; Total block memory bits     ; N/A until Partition Merge                   ;
-; Total PLLs                  ; N/A until Partition Merge                   ;
-; Total DLLs                  ; N/A until Partition Merge                   ;
-+-----------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Apr 11 00:24:15 2025       ;
+; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                   ; DE1_SoC                                     ;
+; Top-level Entity Name           ; DE1_SoC                                     ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 7                                           ;
+; Total pins                      ; 89                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
@@ -149,11 +164,203 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; carDetection.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/Egghead/EE371/lab1/carDetection.sv                                ;         ;
+; DE1_SoC.sv                       ; yes             ; User SystemVerilog HDL File  ; C:/Users/Egghead/EE371/lab1/DE1_SoC.sv                                     ;         ;
+; carCounter.sv                    ; yes             ; User SystemVerilog HDL File  ; C:/Users/Egghead/EE371/lab1/carCounter.sv                                  ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
+; aglobal170.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc      ;         ;
+; db/lpm_divide_52m.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab1/db/lpm_divide_52m.tdf                          ;         ;
+; db/sign_div_unsign_8kh.tdf       ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab1/db/sign_div_unsign_8kh.tdf                     ;         ;
+; db/alt_u_div_mse.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab1/db/alt_u_div_mse.tdf                           ;         ;
+; db/lpm_divide_2am.tdf            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab1/db/lpm_divide_2am.tdf                          ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+
+
++--------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary            ;
++---------------------------------------------+----------+
+; Resource                                    ; Usage    ;
++---------------------------------------------+----------+
+; Estimate of Logic utilization (ALMs needed) ; 39       ;
+;                                             ;          ;
+; Combinational ALUT usage for logic          ; 71       ;
+;     -- 7 input functions                    ; 0        ;
+;     -- 6 input functions                    ; 6        ;
+;     -- 5 input functions                    ; 8        ;
+;     -- 4 input functions                    ; 12       ;
+;     -- <=3 input functions                  ; 45       ;
+;                                             ;          ;
+; Dedicated logic registers                   ; 7        ;
+;                                             ;          ;
+; I/O pins                                    ; 89       ;
+;                                             ;          ;
+; Total DSP Blocks                            ; 0        ;
+;                                             ;          ;
+; Maximum fan-out node                        ; Equal0~0 ;
+; Maximum fan-out                             ; 23       ;
+; Total fan-out                               ; 402      ;
+; Average fan-out                             ; 1.38     ;
++---------------------------------------------+----------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                             ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node             ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                      ; Entity Name         ; Library Name ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |DE1_SoC                               ; 71 (20)             ; 7 (0)                     ; 0                 ; 0          ; 89   ; 0            ; |DE1_SoC                                                                                                 ; DE1_SoC             ; work         ;
+;    |carCounter:counter|                ; 13 (13)             ; 5 (5)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|carCounter:counter                                                                              ; carCounter          ; work         ;
+;    |carDetection:fsm|                  ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|carDetection:fsm                                                                                ; carDetection        ; work         ;
+;    |lpm_divide:Div0|                   ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_2am:auto_generated|  ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|lpm_divide:Div0|lpm_divide_2am:auto_generated                                                   ; lpm_divide_2am      ; work         ;
+;          |sign_div_unsign_8kh:divider| ; 16 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|lpm_divide:Div0|lpm_divide_2am:auto_generated|sign_div_unsign_8kh:divider                       ; sign_div_unsign_8kh ; work         ;
+;             |alt_u_div_mse:divider|    ; 16 (16)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|lpm_divide:Div0|lpm_divide_2am:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_mse:divider ; alt_u_div_mse       ; work         ;
+;    |lpm_divide:Mod0|                   ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|lpm_divide:Mod0                                                                                 ; lpm_divide          ; work         ;
+;       |lpm_divide_52m:auto_generated|  ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|lpm_divide:Mod0|lpm_divide_52m:auto_generated                                                   ; lpm_divide_52m      ; work         ;
+;          |sign_div_unsign_8kh:divider| ; 20 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|lpm_divide:Mod0|lpm_divide_52m:auto_generated|sign_div_unsign_8kh:divider                       ; sign_div_unsign_8kh ; work         ;
+;             |alt_u_div_mse:divider|    ; 20 (20)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |DE1_SoC|lpm_divide:Mod0|lpm_divide_52m:auto_generated|sign_div_unsign_8kh:divider|alt_u_div_mse:divider ; alt_u_div_mse       ; work         ;
++----------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------------------------------------------------------------------------+---------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  User-Encoded
++----------------------------------------------+
+; State Machine - |DE1_SoC|carDetection:fsm|ps ;
++--------+------+------------------------------+
+; Name   ; ps~3 ; ps~2                         ;
++--------+------+------------------------------+
+; ps.S00 ; 0    ; 0                            ;
+; ps.S10 ; 0    ; 1                            ;
+; ps.S11 ; 1    ; 0                            ;
+; ps.S01 ; 1    ; 1                            ;
++--------+------+------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 7     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |DE1_SoC|carCounter:counter|out[3] ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DE1_SoC|HEX0                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Mod0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_52m ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
++------------------------+----------------+------------------------+
+; Parameter Name         ; Value          ; Type                   ;
++------------------------+----------------+------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                ;
+; LPM_WIDTHD             ; 4              ; Untyped                ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
+; LPM_PIPELINE           ; 0              ; Untyped                ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
+; CBXI_PARAMETER         ; lpm_divide_2am ; Untyped                ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
++------------------------+----------------+------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 7                           ;
+;     plain             ; 7                           ;
+; arriav_io_obuf        ; 36                          ;
+; arriav_lcell_comb     ; 76                          ;
+;     arith             ; 14                          ;
+;         0 data inputs ; 4                           ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 4                           ;
+;     normal            ; 52                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 10                          ;
+;         4 data inputs ; 12                          ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 6                           ;
+;     shared            ; 10                          ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 8                           ;
+; boundary_port         ; 89                          ;
+;                       ;                             ;
+; Max LUT depth         ; 6.70                        ;
+; Average LUT depth     ; 3.45                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
 
 
 +-------------------------------+
@@ -162,33 +369,80 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Mon Apr 07 21:13:45 2025
+    Info: Processing started: Fri Apr 11 00:24:02 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE1_SoC -c DE1_SoC
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file hw1p2_tb.sv
-    Info (12023): Found entity 1: hw1p2_tb File: C:/Users/Egghead/OneDrive - UW/Desktop/hw1/hw1p2_tb.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hw1p2.sv
-    Info (12023): Found entity 1: hw1p2 File: C:/Users/Egghead/OneDrive - UW/Desktop/hw1/hw1p2.sv Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file hw1p1_tb.sv
-    Info (12023): Found entity 1: hw1p1_tb File: C:/Users/Egghead/OneDrive - UW/Desktop/hw1/hw1p1_tb.sv Line: 3
-Info (12021): Found 1 design units, including 1 entities, in source file hw1p1.sv
-    Info (12023): Found entity 1: hw1p1 File: C:/Users/Egghead/OneDrive - UW/Desktop/hw1/hw1p1.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder_tb.sv
-    Info (12023): Found entity 1: fullAdder_tb File: C:/Users/Egghead/OneDrive - UW/Desktop/hw1/fullAdder_tb.sv Line: 2
+    Info (12023): Found entity 1: fullAdder_tb File: C:/Users/Egghead/EE371/lab1/fullAdder_tb.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file fulladder.sv
-    Info (12023): Found entity 1: fullAdder File: C:/Users/Egghead/OneDrive - UW/Desktop/hw1/fullAdder.sv Line: 12
-Error (12007): Top-level design entity "DE1_SoC" is undefined
-Info (144001): Generated suppressed messages file C:/Users/Egghead/OneDrive - UW/Desktop/hw1/output_files/DE1_SoC.map.smsg
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 0 warnings
-    Error: Peak virtual memory: 4774 megabytes
-    Error: Processing ended: Mon Apr 07 21:13:55 2025
-    Error: Elapsed time: 00:00:10
-    Error: Total CPU time (on all processors): 00:00:25
+    Info (12023): Found entity 1: fullAdder File: C:/Users/Egghead/EE371/lab1/fullAdder.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file de1_soc_tb.sv
+    Info (12023): Found entity 1: DE1_SoC_tb File: C:/Users/Egghead/EE371/lab1/DE1_SoC_tb.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file cardetection.sv
+    Info (12023): Found entity 1: carDetection File: C:/Users/Egghead/EE371/lab1/carDetection.sv Line: 1
+    Info (12023): Found entity 2: carDetection_tb File: C:/Users/Egghead/EE371/lab1/carDetection.sv Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file de1_soc.sv
+    Info (12023): Found entity 1: DE1_SoC File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file carcounter.sv
+    Info (12023): Found entity 1: carCounter File: C:/Users/Egghead/EE371/lab1/carCounter.sv Line: 4
+    Info (12023): Found entity 2: carCounter_tb File: C:/Users/Egghead/EE371/lab1/carCounter.sv Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at DE1_SoC_tb.sv(27): created implicit net for "enter_out" File: C:/Users/Egghead/EE371/lab1/DE1_SoC_tb.sv Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at DE1_SoC_tb.sv(28): created implicit net for "exit_out" File: C:/Users/Egghead/EE371/lab1/DE1_SoC_tb.sv Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at DE1_SoC_tb.sv(29): created implicit net for "count_out" File: C:/Users/Egghead/EE371/lab1/DE1_SoC_tb.sv Line: 29
+Info (12127): Elaborating entity "DE1_SoC" for the top level hierarchy
+Warning (10665): Bidirectional port "V_GPIO[24]" at DE1_SoC.sv(9) has a one-way connection to bidirectional port "V_GPIO[34]" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 9
+Warning (10665): Bidirectional port "V_GPIO[23]" at DE1_SoC.sv(9) has a one-way connection to bidirectional port "V_GPIO[35]" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 9
+Info (12128): Elaborating entity "carDetection" for hierarchy "carDetection:fsm" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 37
+Info (12128): Elaborating entity "carCounter" for hierarchy "carCounter:counter" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 46
+Warning (10230): Verilog HDL assignment warning at carCounter.sv(16): truncated value with size 32 to match size of target (5) File: C:/Users/Egghead/EE371/lab1/carCounter.sv Line: 16
+Warning (10230): Verilog HDL assignment warning at carCounter.sv(18): truncated value with size 32 to match size of target (5) File: C:/Users/Egghead/EE371/lab1/carCounter.sv Line: 18
+Info (10264): Verilog HDL Case Statement information at carCounter.sv(14): all case item expressions in this case statement are onehot File: C:/Users/Egghead/EE371/lab1/carCounter.sv Line: 14
+Info (278001): Inferred 2 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Mod0" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 82
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 76
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Mod0" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 82
+Info (12133): Instantiated megafunction "lpm_divide:Mod0" with the following parameter: File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 82
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_52m.tdf
+    Info (12023): Found entity 1: lpm_divide_52m File: C:/Users/Egghead/EE371/lab1/db/lpm_divide_52m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_8kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_8kh File: C:/Users/Egghead/EE371/lab1/db/sign_div_unsign_8kh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_mse.tdf
+    Info (12023): Found entity 1: alt_u_div_mse File: C:/Users/Egghead/EE371/lab1/db/alt_u_div_mse.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 76
+Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 76
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "4"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_2am.tdf
+    Info (12023): Found entity 1: lpm_divide_2am File: C:/Users/Egghead/EE371/lab1/db/lpm_divide_2am.tdf Line: 25
+Warning (13039): The following bidirectional pins have no drivers
+Warning (13009): TRI or OPNDRN buffers permanently enabled
+    Warning (13010): Node "outer~synth" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 16
+    Warning (13010): Node "inner~synth" File: C:/Users/Egghead/EE371/lab1/DE1_SoC.sv Line: 16
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/Egghead/EE371/lab1/output_files/DE1_SoC.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 160 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 52 output pins
+    Info (21060): Implemented 36 bidirectional pins
+    Info (21061): Implemented 71 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Peak virtual memory: 4836 megabytes
+    Info: Processing ended: Fri Apr 11 00:24:15 2025
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in C:/Users/Egghead/OneDrive - UW/Desktop/hw1/output_files/DE1_SoC.map.smsg.
+The suppressed messages can be found in C:/Users/Egghead/EE371/lab1/output_files/DE1_SoC.map.smsg.
 
 

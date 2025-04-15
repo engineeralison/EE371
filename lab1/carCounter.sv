@@ -1,12 +1,25 @@
-// A car counter with two control signals, incr and decr, which 
-// increment and decrement the counter, respectively, when asserted
+//======================================================
+// Module: carCounter
+// Description:
+//  A 5-bit counter that tracks the number of cars in a 
+//  parking lot, based on entry (incr) and exit (decr) pulses.
+//  Count is bounded between 0 and 16.
+// 
+// Ports:
+//  - reset: Synchronous reset input (resets count to 0)
+//  - clk: Clock input (positive edge-triggered)
+//  - incr: Pulse to increment count
+//  - decr: Pulse to decrement count
+//  - out:  5-bit output representing the car count (0–16)
+//======================================================
 
 module carCounter(reset, clk, incr, decr, out);
 	input logic reset, clk;
 	input logic incr, decr;
 	output logic [4:0] out; //5-bit counter to represent 0-16 vacant parking spots
 	
-	// counter changes on the rising edge of clock clk
+	// === Synchronous Logic ===
+   // Updates the count on the rising edge of the clock
 	always_ff @(posedge clk) begin
 			  if (reset) begin
 					out <= 5'd0;
@@ -24,7 +37,12 @@ module carCounter(reset, clk, incr, decr, out);
 	
 endmodule // carCounter 
 
-// Testbench for carCounter Module
+//======================================================
+// Module: carCounter_tb
+// Description:
+//  Testbench for carCounter module. Verifies behavior 
+//  for incrementing, decrementing, saturation, and reset.
+//======================================================
 module carCounter_tb ();
 	logic reset, clk, incr, decr;
 	logic [4:0] out;

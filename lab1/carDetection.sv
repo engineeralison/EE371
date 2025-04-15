@@ -1,8 +1,33 @@
+//======================================================
+// Module: carDetection
+// Description: 
+//  Finite State Machine (FSM) that detects car entry 
+//  and exit events based on the sequence of sensor signals.
+// 
+// Ports:
+//  - clk: Clock signal
+//  - reset: Synchronous reset signal
+//  - outer, inner: Signals from photo sensors
+//  - enter: High for one cycle when car enters
+//  - exit:  High for one cycle when car exits
+//
+// Notes:
+//  - Assumes valid sequences: 
+//    Entry = 00 → 10 → 11 → 01 → 00
+//    Exit  = 00 → 01 → 11 → 10 → 00
+//======================================================
+
 module carDetection (clk, reset, outer, inner, enter, exit);
     input  logic clk, reset;
     input  logic outer, inner;
     output logic enter, exit;
 
+	 // === FSM State Declaration ===
+    // S00: both sensors unblocked
+    // S10: only outer blocked → start of potential entry
+    // S11: both blocked → transition state
+    // S01: only inner blocked → potential exit phase
+	 
     // FSM states named after sensor combinations
     enum logic [1:0] {S00, S10, S11, S01} ps, ns;
 
@@ -40,7 +65,12 @@ module carDetection (clk, reset, outer, inner, enter, exit);
 endmodule // carDetection
 
 
-
+//======================================================
+// Module: carDetection_tb
+// Description:
+//  Testbench for carDetection FSM. Simulates sequences
+//  of sensor signals to verify correct entry/exit detection.
+//======================================================
 module carDetection_tb ();
 	logic clk, reset, outer, inner, enter, exit;
 	
@@ -75,6 +105,4 @@ module carDetection_tb ();
         $stop;
     end
 
-	
-	
-endmodule 
+endmodule //carDetection_tb

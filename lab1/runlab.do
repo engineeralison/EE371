@@ -1,21 +1,19 @@
 # Create work library
 vlib work
 
-# Compile Verilog
-#     All Verilog files that are part of this design should have
-#     their own "vlog" line below.
+# Compile SystemVerilog files with access enabled
+vlog -sv +acc fullAdder.sv
+vlog -sv +acc fullAdder_tb.sv
+vlog -sv +acc carCounter.sv
+vlog -sv +acc carDetection.sv
+vlog -sv +acc DE1_SoC.sv
+vlog -sv +acc DE1_SoC_tb.sv
 
-vlog "fullAdder_tb.sv"
-vlog "fullAdder.sv"
-vlog "carCounter.sv"
+# Launch simulation with access enabled
+vsim -voptargs="+acc" -t 1ps work.DE1_SoC_tb
 
-
-# Run simulation
-vsim -voptargs="+acc" -t 1ps -lib work carCounter_tb
-# Source the wave.do file
+# Load waveform view
 do wave.do
 
-# Run simulation for carCounter_tb
+# Run simulation
 run -all
-
-# End
