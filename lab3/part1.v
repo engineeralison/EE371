@@ -25,12 +25,12 @@ module part1 (CLOCK_50, CLOCK2_50, KEY, SW, FPGA_I2C_SCLK, FPGA_I2C_SDAT, AUD_XC
 	
 	// Task 1:
 	
-	assign writedata_left = readdata_left & write_ready;
-	assign writedata_right = readdata_right & write_ready;
-
-	assign read = read_ready & write_ready;
-	assign write = read_ready & write_ready;
-	
+	assign writedata_left = readdata_left;
+	assign writedata_right = readdata_right;
+	    
+	assign read = read_ready;
+	assign write = write_ready;
+		
 	// Task 2:
 	
 	// Task 3:
