@@ -1,59 +1,51 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 
+# DUT signals from DE1_SoC_tb
+add wave -noupdate /task1_tb/dut/clk
+add wave -noupdate /task1_tb/dut/addr
+add wave -noupdate /task1_tb/dut/dataIn
+add wave -noupdate /task1_tb/dut/dataOut
+add wave -noupdate /task1_tb/dut/write
 
-# Add signals related to task1 testbench
-add wave -noupdate /task1_tb/clk
-add wave -noupdate /task1_tb/reset
-add wave -noupdate /task1_tb/write
-add wave -noupdate /task1_tb/address
-add wave -noupdate /task1_tb/dataIn
-add wave -noupdate /task1_tb/dataOut
-
-
-# Add signals related to carDetection testbench
-#add wave -noupdate /task2/clk
-#add wave -noupdate /task2/reset
-#add wave -noupdate /task2/write
-#add wave -noupdate /task2/dataIn
-#add wave -noupdate /task2/address
-#add wave -noupdate /task2/dataOut
-
-
-# Add signals related to DE1_SoC testbench
-add wave -noupdate /DE1_SoC_tb/clk
-add wave -noupdate /DE1_SoC_tb/SW
-add wave -noupdate /DE1_SoC_tb/KEY
-add wave -noupdate /DE1_SoC_tb/HEX0
-add wave -noupdate /DE1_SoC_tb/HEX1
-add wave -noupdate /DE1_SoC_tb/HEX2
-add wave -noupdate /DE1_SoC_tb/HEX3
-add wave -noupdate /DE1_SoC_tb/HEX4
-add wave -noupdate /DE1_SoC_tb/HEX5
+add wave -noupdate /DE1_SoC_tb/dut/CLOCK_50
+add wave -noupdate /DE1_SoC_tb/dut/SW
+add wave -noupdate /DE1_SoC_tb/dut/KEY
+add wave -noupdate /DE1_SoC_tb/dut/HEX0
+add wave -noupdate /DE1_SoC_tb/dut/HEX1
+add wave -noupdate /DE1_SoC_tb/dut/HEX2
+add wave -noupdate /DE1_SoC_tb/dut/HEX3
+add wave -noupdate /DE1_SoC_tb/dut/HEX4
+add wave -noupdate /DE1_SoC_tb/dut/HEX5
 add wave -noupdate /DE1_SoC_tb/dut/LEDR
-add wave -noupdate /DE1_SoC_tb/dut/V_GPIO
+add wave -noupdate /DE1_SoC_tb/dut/DataIn_debug
+add wave -noupdate /DE1_SoC_tb/dut/DataOut_debug
 
 
-# Update the signal tree and configure the waveform window
+# Optional: if DUT exposes internal signals (like rdaddress, Write, DataIn/Out)
+# add wave -noupdate /DE1_SoC_tb/dut/rdaddress
+# add wave -noupdate /DE1_SoC_tb/dut/Write
+# add wave -noupdate /DE1_SoC_tb/dut/DataIn
+# add wave -noupdate /DE1_SoC_tb/dut/DataOut
+
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {237 ps} 0}
+WaveRestoreCursors {{Cursor 1} 500ps} 0}
 quietly wave cursor active 1
 
-# Configure waveform appearance
+# Configure display
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
-configure wave -signalnamewidth 1
+configure wave -signalnamewidth 0
 configure wave -snapdistance 10
 configure wave -datasetprefix 0
 configure wave -rowmargin 4
 configure wave -childrowmargin 2
 configure wave -gridoffset 0
-configure wave -gridperiod 1
+configure wave -gridperiod 100
 configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ps
 
-# Zoom and cursor settings
 update
-WaveRestoreZoom {0 ps} {1276 ps}
+WaveRestoreZoom {0 ps} {2000 ps}

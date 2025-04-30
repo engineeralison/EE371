@@ -1,41 +1,61 @@
-`timescale 1ns/1ps
+//==============================================================================
+// task2.sv
+// Implements a 32x3 RAM using a SystemVerilog 2D array.
+// 
+// Lab Spec – Task 2:
+// - Use a [31:0] array of 3-bit words to implement RAM.
+// - On rising edge of clock:
+//     - Capture addr, dataIn, and write signal using flip-flops.
+// - If write = 1, store dataIn at addr.
+// - If write = 0, read from addr and output dataOut.
+//
+// Inputs:
+//   - clk     : 50MHz clock
+//   - addr    : 5-bit address to read/write
+//   - dataIn  : 3-bit input data to be written (if write enabled)
+//   - write   : Write enable signal
+//
+// Output:
+//   - dataOut : 3-bit data read from memory (or echo on write)
+//==============================================================================
+module task2 (
+    input  logic       clk,             // Clock signal
+    input  logic       write,           // Write enable
+    input  logic [4:0] addr,            // Memory address
+    input  logic [2:0] dataIn,          // Data input
+    output logic [2:0] dataOut          // Data output
+);
 
-module task2 (clk, reset, write, dataIn, address, dataOut);
-	input logic clk, reset;
-	input logic write;
-	input logic [2:0] dataIn;
-	input logic [4:0] address;
-	output logic [2:0] dataOut;
-	
-	// 32x3 memory array
-	logic [2:0] memory_array [31:0];
-	
-	logic [4:0] address_reg;
-   logic [2:0] dataIn_reg;
-   logic write_reg;
-	
-	// Register and pipeline the inputs
-	always_ff @(posedge clk) begin
-		if (reset) begin
-			 address_reg <= 5'd0;
-          dataIn_reg  <= 3'd0;
-          write_reg   <= 1'b0;
-        end 
-        else begin
-            address_reg <= address;
-            dataIn_reg  <= dataIn;
-            write_reg   <= write;
+    //==========================================================================
+    // Internal Declarations
+    //==========================================================================
+    logic [2:0] memory_array [31:0];     // 32 words of 3-bit memory
+    logic [4:0] addressff;               // Registered address
+    logic [2:0] dataff;                  // Registered data
+    logic       wrenff;                  // Registered write enable
+
+    //==========================================================================
+    // Input Flip-Flops (D-FFs on clock edge)
+    // Capture inputs synchronously on rising clock edge
+    //==========================================================================
+    always_ff @(posedge clk) begin
+        addressff <= addr;
+        dataff    <= dataIn;
+        wrenff    <= write;
+    end
+
+    //==========================================================================
+    // RAM Logic (Read or Write based on registered write enable)
+    //==========================================================================
+    always_comb begin
+        if (wrenff) begin
+            // Write: store value at address and output it immediately
+            memory_array[addressff] = dataff;
+            dataOut = dataff;
+        end else begin
+            // Read: return value stored at address
+            dataOut = memory_array[addressff];
         end
     end
-	 
-	 // Write data into into memory array when write_reg is asserted
-	  always_ff @(posedge clk) begin
-        if (write_reg) begin
-            memory_array[address_reg] <= dataIn_reg;
-        end
-    end
-	 
-	 // Read data out of the memory array
-	 assign dataOut = memory_array[address_reg];
-	
-endmodule 
+
+endmodule //task2

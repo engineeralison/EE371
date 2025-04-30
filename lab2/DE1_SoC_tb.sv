@@ -1,85 +1,108 @@
-`timescale 1ns/1ps
+//==============================================================================
+// DE1_SoC_tb.sv
+// Testbench for top-level DE1_SoC module
+//
+// This testbench verifies functionality for both memory modules:
+// - Task 2: array-based 32x3 RAM
+// - Task 3: dual-port RAM with internal read address counter
+//
+// Features:
+// - 50 MHz clock generator
+// - Test sequence writing to each RAM module
+// - Stimulates switch and button inputs
+//
+// Assumes:
+// - HEX displays used for visual debugging
+// - LEDR output present but unused in testbench
+//==============================================================================
+
+`timescale 1ps/1ps
 
 module DE1_SoC_tb;
 
-  // ----------------------------------
-  // 1) Testbench Signal Declarations
-  // ----------------------------------
-  logic        clk;   // Simulated 50 MHz clock
-  logic [9:0]  SW;          // Simulated 10 switches
-  logic [3:0]  KEY;         // Simulated 4 push buttons (active low on real board)
-  wire [6:0]   HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
-  wire [9:0]   LEDR;
-  wire [35:0]  V_GPIO;
+  //==========================================================================
+  // DUT I/O Signals
+  //==========================================================================
+  logic        CLOCK_50;
+  logic [9:0]  SW;
+  logic [3:0]  KEY;
+  logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
+  logic [9:0]  LEDR;
 
-  // ----------------------------------
-  // 2) Instantiate the DUT (Device Under Test)
-  // ----------------------------------
+  //==========================================================================
+  // DUT Instantiation
+  //==========================================================================
   DE1_SoC dut (
-    .SW        (SW),
-    .KEY       (KEY),
-    .HEX0      (HEX0),
-    .HEX1      (HEX1),
-    .HEX2      (HEX2),
-    .HEX3      (HEX3),
-    .HEX4      (HEX4),
-    .HEX5      (HEX5),
-    .LEDR      (LEDR),
-    .V_GPIO    (V_GPIO)
+    .CLOCK_50(CLOCK_50),
+    .SW(SW),
+    .KEY(KEY),
+    .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2),
+    .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5),
+    .LEDR(LEDR)
   );
 
-  // ----------------------------------
-  // 3)  Toggle KEY[0] 
+  //==========================================================================
+  // Clock Generation (50MHz = 20ns period)
+  //==========================================================================
   initial begin
-    // Assume all keys start 'not pressed' => 1 in hardware (active low)
-    KEY = 4'b1111;
-    forever begin
-      // Toggle KEY[0] every 100 ns for demonstration
-      #100 KEY[0] = ~KEY[0];
-    end
+    CLOCK_50 = 0;
+    forever #10 CLOCK_50 = ~CLOCK_50;
   end
 
-  // ----------------------------------
-  // 5) Drive the SW signals in a Sequence
-  //    to test writing & reading memory
-  // ----------------------------------
+  //==========================================================================
+  // Helper Task: Write to memory module (Task 2 or Task 3)
+  // memSelect = 0 → task2 RAM
+  // memSelect = 1 → ram32x3port2 RAM
+  //==========================================================================
+  task write_to_memory(input logic memSelect, input [4:0] addr, input [2:0] data);
+    begin
+      SW[9]   = memSelect;   // Select memory module
+      SW[8:4] = addr;        // Set address
+      SW[3:1] = data;        // Set data
+      SW[0]   = 1;           // Assert write enable
+      @(posedge CLOCK_50);   // Wait one clock cycle
+      SW[0]   = 0;           // Deassert write enable
+      @(posedge CLOCK_50);   // Wait one more clock
+    end
+  endtask
+
+  //==========================================================================
+  // Main Stimulus Block
+  //==========================================================================
+  integer i;
   initial begin
-    // Initialize SW to zero
-    SW = 10'd0;
+    // Initialize switch and key values
+    SW  = '0;
+    KEY = '0;
 
-    // Wait a bit for DUT to come out of reset (if you add any reset logic)
-    #200;
+    // Apply synchronous reset (KEY[0] = active-low)
+    #50;
+    KEY[0] = 1; @(posedge CLOCK_50);
+    KEY[0] = 0; @(posedge CLOCK_50);
 
-    // Example 1: Write 3'b101 to address 5'd0
-    // SW[0]   = write
-    // SW[3:1] = dataIn
-    // SW[8:4] = address
-    // 
-    SW[0]   = 1'b1;     // write = 1
-    SW[3:1] = 3'b101;   // dataIn = 5
-    SW[8:4] = 5'd0;     // address = 0
-    #200;               // Wait a few clock cycles
+    //==================================================
+    // Write to Task 2 RAM (array-based memory)
+    //==================================================
+    $display("Writing to Task 2 RAM...");
+    for (i = 0; i < 32; i++) begin
+      write_to_memory(1'b0, i[4:0], (i * 3) % 8);
+    end
 
-    // Example 2: Write 3'b011 to address 5'd1
-    SW[3:1] = 3'b011;   // dataIn = 3
-    SW[8:4] = 5'd1;     // address = 1
-    #200;
+    #100; // Delay between tests
 
-    // Disable write
-    SW[0]   = 1'b0;     // write = 0
-    #200;
+    //==================================================
+    // Write to Task 3 RAM (dual-port with read counter)
+    //==================================================
+    $display("Writing to Task 3 RAM...");
+    for (i = 0; i < 32; i++) begin
+      write_to_memory(1'b1, i[4:0], (i * 2 + 1) % 8);
+    end
 
-    // Example 3: Read address 0 (just set address=0, write=0)
-    SW[8:4] = 5'd0;
-    // dataIn doesn't matter, since write=0
-    #300;
+    // Allow time for automatic read address to increment
+    #500;
 
-    // Example 4: Read address 1
-    SW[8:4] = 5'd1;
-    #300;
-
-    // End the simulation
+    $display("Simulation finished.");
     $stop;
   end
 
-endmodule
+endmodule //DE1_Soc_tb

@@ -1,0 +1,51 @@
+# Reading C:/intelFPGA_lite/17.0/modelsim_ase/tcl/vsim/pref.tcl
+do runlab.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:40:47 on Apr 16,2025
+# vlog -reportprogress 300 -sv "+acc" sign_mag_add_tb.sv 
+# -- Compiling module sign_mag_add_tb
+# 
+# Top level modules:
+# 	sign_mag_add_tb
+# End time: 15:40:47 on Apr 16,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:40:47 on Apr 16,2025
+# vlog -reportprogress 300 -sv "+acc" sign_mag_add.sv 
+# -- Compiling module sign_mag_add
+# 
+# Top level modules:
+# 	sign_mag_add
+# End time: 15:40:47 on Apr 16,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:40:47 on Apr 16,2025
+# vlog -reportprogress 300 -sv "+acc" sync_rom.sv 
+# -- Compiling module sync_rom
+# 
+# Top level modules:
+# 	sync_rom
+# End time: 15:40:47 on Apr 16,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -voptargs=""+acc"" -t 1ps work.sign_mag_add_tb 
+# Start time: 15:40:47 on Apr 16,2025
+# Loading sv_std.std
+# Loading work.sign_mag_add_tb
+# Loading work.sign_mag_add
+# Loading work.sync_rom
+# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/CLOCK_50'.
+# Executing ONERROR command at macro ./wave.do line 5
+# ** Error: (vish-4014) No objects found matching '/sign_mag_add/a'.
+# Executing ONERROR command at macro ./wave.do line 6
+# ** Error: (vish-4014) No objects found matching '/sign_mag_add/b'.
+# Executing ONERROR command at macro ./wave.do line 7
+# ** Error: (vish-4014) No objects found matching '/sign_mag_add/sum'.
+# Executing ONERROR command at macro ./wave.do line 8
+# === Running sign_mag_add_tb with ROM comparison ===
+# === Test complete ===
+# ** Note: $stop    : sign_mag_add_tb.sv(63)
+#    Time: 1551 ps  Iteration: 0  Instance: /sign_mag_add_tb
+# Break in Module sign_mag_add_tb at sign_mag_add_tb.sv line 63
+# End time: 15:54:55 on Apr 16,2025, Elapsed time: 0:14:08
+# Errors: 12, Warnings: 0

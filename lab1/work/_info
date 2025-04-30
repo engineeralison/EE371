@@ -10,23 +10,23 @@ cModel Technology
 Z0 dC:/Users/Egghead/OneDrive - UW/Desktop/hw1
 vcarCounter
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1744355166
+Z2 !s110 1744843216
 !i10b 1
-!s100 cDW`V@i9jz<OL:;Bj4h;d1
-IBca<3BWD>3:zlYh7<f71k0
+!s100 Z5CB6bkmM?T^R>kEW7?SR1
+IF:n[LmE_ggHeoPI:U4P;31
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 Z4 !s105 carCounter_sv_unit
 S1
 Z5 dC:/Users/Egghead/EE371/lab1
-Z6 w1744314700
+Z6 w1744836991
 Z7 8carCounter.sv
 Z8 FcarCounter.sv
-L0 4
+L0 16
 Z9 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z10 !s108 1744355166.000000
+Z10 !s108 1744843215.000000
 Z11 !s107 carCounter.sv|
 Z12 !s90 -reportprogress|300|-sv|+acc|carCounter.sv|
 !i113 1
@@ -37,8 +37,8 @@ vcarCounter_tb
 R1
 R2
 !i10b 1
-!s100 iQmN2DS0G6MO3JGA@;mY[1
-Il=RfHQLcP?l[_=A77ZQK72
+!s100 zhSgGf3?_U[ZBn[>nmYO80
+Imd9j1EY1YI@:oITO8:Wdn2
 R3
 R4
 S1
@@ -46,7 +46,7 @@ R5
 R6
 R7
 R8
-L0 28
+L0 46
 R9
 r1
 !s85 0
@@ -62,21 +62,21 @@ vcarDetection
 R1
 R2
 !i10b 1
-!s100 fz14G1;2o:9PZ_fb8i0;j3
-ICP5WS0X?iSPR6:lLOS@:C3
+!s100 ITfUUQ6_QG_D6D8TcF0<`2
+IeBA>:1kVSFL`WKU^ZaUmA0
 R3
 Z15 !s105 carDetection_sv_unit
 S1
 R5
-Z16 w1744341091
-Z17 8carDetection.sv
-Z18 FcarDetection.sv
-L0 1
+R6
+Z16 8carDetection.sv
+Z17 FcarDetection.sv
+L0 20
 R9
 r1
 !s85 0
 31
-R10
+Z18 !s108 1744843216.000000
 Z19 !s107 carDetection.sv|
 Z20 !s90 -reportprogress|300|-sv|+acc|carDetection.sv|
 !i113 1
@@ -87,21 +87,21 @@ vcarDetection_tb
 R1
 R2
 !i10b 1
-!s100 Ka9Vz4VPfG?@9l6Peal]82
-IM=>DeJUH@1eaW:dTnELWM1
+!s100 [7_g^@9<E^?lgYV3Qd<Ij2
+I55NjblMJQ7bL>BZ>VhDWc2
 R3
 R15
 S1
 R5
+R6
 R16
 R17
-R18
-L0 44
+L0 74
 R9
 r1
 !s85 0
 31
-R10
+R18
 R19
 R20
 !i113 1
@@ -110,23 +110,23 @@ R14
 ncar@detection_tb
 vDE1_SoC
 R1
-Z21 !s110 1744355167
+R2
 !i10b 1
-!s100 aWUNEBAPhl8RKW;DYEmNQ3
-INlOcl;H?K22dYHSf0bYLJ2
+!s100 SiMUJY[`zThLInbAg]k8D2
+I4m6NWFTd??kP77K3zoolG1
 R3
 !s105 DE1_SoC_sv_unit
 S1
 R5
-w1744355160
+R6
 8DE1_SoC.sv
 FDE1_SoC.sv
-L0 1
+L0 19
 R9
 r1
 !s85 0
 31
-Z22 !s108 1744355167.000000
+R18
 !s107 DE1_SoC.sv|
 !s90 -reportprogress|300|-sv|+acc|DE1_SoC.sv|
 !i113 1
@@ -135,23 +135,23 @@ R14
 n@d@e1_@so@c
 vDE1_SoC_tb
 R1
-R21
+R2
 !i10b 1
-!s100 YUMMXAzjWVEX0L6mMm4j32
-I<oHSko6AibLIROHQUdVWC2
+!s100 6CiJFlF8RPjj>TR2`>mi]1
+IkMN4?:D@V3VdPzGcPc:0K3
 R3
 !s105 DE1_SoC_tb_sv_unit
 S1
 R5
-w1744355162
+R6
 8DE1_SoC_tb.sv
 FDE1_SoC_tb.sv
-L0 1
+Z21 L0 12
 R9
 r1
 !s85 0
 31
-R22
+R18
 !s107 DE1_SoC_tb.sv|
 !s90 -reportprogress|300|-sv|+acc|DE1_SoC_tb.sv|
 !i113 1
@@ -160,7 +160,7 @@ R14
 n@d@e1_@so@c_tb
 vfullAdder
 R1
-R2
+Z22 !s110 1744843215
 !i10b 1
 !s100 L6_LPn@j0e?1>iV9_?L4R1
 I>XFBf@MKLlkf^]gd]=aIa1
@@ -168,10 +168,10 @@ R3
 !s105 fullAdder_sv_unit
 S1
 R5
-w1744083675
+R6
 8fullAdder.sv
 FfullAdder.sv
-L0 12
+R21
 R9
 r1
 !s85 0
@@ -185,7 +185,7 @@ R14
 nfull@adder
 vfullAdder_tb
 R1
-R2
+R22
 !i10b 1
 !s100 A0iYMQH3ljlLDmFeg8k;h1
 IeHKfHJF_Pcjm]_:0FI8@90
@@ -193,7 +193,7 @@ R3
 !s105 fullAdder_tb_sv_unit
 S1
 R5
-w1744083691
+R6
 8fullAdder_tb.sv
 FfullAdder_tb.sv
 L0 2

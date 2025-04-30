@@ -1,22 +1,72 @@
-/* testbench for the DE1_SoC */
-module DE1_SoC_tb();
+`timescale 1ps/1ps
+module DE1_SoC_tb;
 
-	// define signals
-	logic	CLOCK_50;
-	logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
-	logic [9:0] LEDR;
-	logic [35:0] V_GPIO;
-	
-	// define parameters
-	parameter T = 20;
-	
-	// instantiate module
-	DE1_SoC dut (.*);
-	
-	// define simulated clock
-	initial begin
-		CLOCK_50 <= 0;
-		forever	#(T/2)	CLOCK_50 <= ~CLOCK_50;
-	end  // initial clock
-	
-endmodule  // DE1_SoC_tb
+  logic        CLOCK_50;
+  logic [9:0]  SW;
+  logic [3:0]  KEY;
+  logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;
+  logic [9:0]  LEDR;
+
+  // Instantiate DUT
+  DE1_SoC dut (
+    .CLOCK_50(CLOCK_50),
+    .SW(SW),
+    .KEY(KEY),
+    .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2),
+    .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5),
+    .LEDR(LEDR),
+    .V_GPIO() // unused
+  );
+
+  // Clock generation
+  initial begin
+    CLOCK_50 = 0;
+    forever #10 CLOCK_50 = ~CLOCK_50; // 50 MHz clock (20ns period)
+  end
+
+  // Helper task to write to either memory
+  task write_to_memory(input logic memSelect, input [4:0] addr, input [2:0] data);
+    begin
+      SW[9]   = memSelect;
+      SW[8:4] = addr;
+      SW[3:1] = data;
+      SW[0]   = 1;
+      @(posedge CLOCK_50);
+      SW[0]   = 0;
+      @(posedge CLOCK_50);
+    end
+  endtask
+
+  integer i;
+  initial begin
+    // Init
+    SW  = '0;
+    KEY = '0;
+
+    // Apply reset
+    #50;
+    KEY[0] = 1; @(posedge CLOCK_50);
+    KEY[0] = 0; @(posedge CLOCK_50);
+
+    // === Task 2 ===
+    $display("Writing to Task 2...");
+    for (i = 0; i < 32; i++) begin
+      write_to_memory(1'b0, i[4:0], (i * 3) % 8);
+    end
+
+    #100;
+
+    // === Task 3 ===
+    $display("Writing to Task 3...");
+    for (i = 0; i < 32; i++) begin
+      write_to_memory(1'b1, i[4:0], (i * 2 + 1) % 8);
+    end
+
+    // Let read address run for a few cycles
+    #500;
+
+    $display("Simulation finished.");
+    $stop;
+  end
+
+endmodule

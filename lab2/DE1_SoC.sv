@@ -1,51 +1,99 @@
-//======================================================
-// Module: DE1_SoC
-// Description: 
-// 
-// Ports:
-//  -
+//==============================================================================
+// DE1_SoC.v
+// Top-level module for Task 3 of the SystemVerilog Lab.
+// Implements switching between two different 32x3 RAM memory modules:
+//   - Task 2 array-based RAM
+//   - Task 3 dual-port RAM initialized with a MIF file
 //
-// Connections:
-//  -
-//======================================================
-`timescale 1ns/1ps
+// Input Mappings:
+//   SW[0]     → Write enable
+//   SW[3:1]   → DataIn (3-bit)
+//   SW[8:4]   → Address (5-bit)
+//   SW[9]     → RAM selector: 0 = task2, 1 = ram32x3port2
+//   KEY[0]    → Active-low reset
+// Output Mappings:
+//   HEX0      → DataOut
+//   HEX1      → DataIn
+//   HEX2,3    → Read address (only ram32x3port2)
+//   HEX4,5    → Write address (common)
+//==============================================================================
+`timescale 1 ps / 1 ps
 
 module DE1_SoC (
-	 input logic [9:0] SW,
-	 input logic [3:0] KEY,
-    output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5,
-    output logic [9:0]  LEDR,
-    inout  logic [35:0] V_GPIO
-);
+    input  logic        CLOCK_50,     // 50 MHz system clock
+    input  logic [9:0]  SW,           // Toggle switches
+    input  logic [3:0]  KEY,          // Push buttons
+    output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, // 7-seg displays
+    output logic [9:0]  LEDR,         // (Unused - kept for debugging)
+	 //uncomment below for simulation
+	 output logic [2:0] DataIn_debug,
+	 output logic [2:0] DataOut_debug
 
-	 // Clock Hookup
-    logic clk, reset;
-	 logic write;
-	 logic [4:0] address;
-	 logic [2:0] dataIn, dataOut;
-	  
-    assign LEDR = 10'b0; // unsured
-	 assign V_GPIO = 36'bZ; // tristate, unused
-	 assign write = SW[0];
-	 assign dataIn = SW[3:1];
-	 assign address = SW[8:4];
-	 assign clk = KEY[0];
+	 );
 
-	 // Instantiate task 2 module
-	 task2 memory_inst ( .clk(clk), .reset(!reset), .write(write), .dataIn (dataIn), .address(address), .dataOut(dataOut));
+
+    //==========================================================================
+    // Internal Signals
+    //==========================================================================
+    logic [2:0] DataIn, DataOut, ram2_out, task2_out;
+    logic [4:0] Address, rdaddress;
+    logic       Write, Write_task2, Write_ram2, reset;
+
+    //==========================================================================
+    // Input Assignments
+    //==========================================================================
+    // uncomment below for simulation
+	 assign DataIn_debug = DataIn;
+    assign DataOut_debug = DataOut;
 	 
-	 // Display address[4] on HEX5 (upper nibble), address[3:0] on HEX4
-    seg7 seg_addr_hi (.hex({3'b0, address[4]}), .leds(HEX5));
-    seg7 seg_addr_lo (.hex(address[3:0]), .leds(HEX4));
+	 assign DataIn   = SW[3:1];
+    assign Address  = SW[8:4];
+    assign Write    = SW[0];
+    assign reset    = ~KEY[0];
 
-    // Display dataIn (3 bits) on HEX1, also zero-extended to 4 bits
-    seg7 seg_din (.hex({1'b0, dataIn}), .leds(HEX1));
+    // RAM selector logic (SW9): controls which write-enable signal is active
+    assign Write_task2 = (SW[9] == 1'b0) ? Write : 1'b0;
+    assign Write_ram2  = (SW[9] == 1'b1) ? Write : 1'b0;
 
-    // Display dataOut (3 bits) on HEX0
-    seg7 seg_dout (.hex({1'b0, dataOut}), .leds(HEX0));
+    // Output selector logic
+    assign DataOut = (SW[9]) ? ram2_out : task2_out;
 
-    // Leave HEX2 and HEX3 blank/off
-    assign HEX2 = 7'b1111111;
-    assign HEX3 = 7'b1111111;
-    
-endmodule // DE1_SoC
+    //==========================================================================
+    // Display Mapping
+    //==========================================================================
+    lights_3bits data_in_display   (.in(DataIn),   .HEX0(HEX1));
+    lights_3bits data_out_display  (.in(DataOut),  .HEX0(HEX0));
+	 
+    lights_5bits write_addr_display(.in(Address),  .HEX0(HEX4), .HEX1(HEX5));
+    lights_5bits read_addr_display (.in(rdaddress),.HEX0(HEX2), .HEX1(HEX3));
+
+    //==========================================================================
+    // Read Address Counter (only used by ram32x3port2)
+    //==========================================================================
+    always_ff @(posedge CLOCK_50) begin
+        if (reset) begin
+            rdaddress <= 5'b0;
+        end else begin
+            rdaddress <= rdaddress + 1'b1;
+        end
+    end
+
+    //==========================================================================
+    // Module Instantiations
+    //==========================================================================
+    task2 u_task2 (
+        .addr(Address),
+        .clk(CLOCK_50),
+        .dataIn(DataIn),
+        .write(Write_task2), .dataOut(task2_out));
+
+    ram32x3port2 u_ram2 (
+        .clock(CLOCK_50),
+        .data(DataIn),
+        .rdaddress(rdaddress),
+        .wraddress(Address),
+        .wren(Write_ram2),
+        .q(ram2_out)
+    );
+
+endmodule  // DE1_SoC

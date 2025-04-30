@@ -1,22 +1,32 @@
+# =============================================================================
+# runlab.do - Script to compile and simulate the DE1_SoC design
+# =============================================================================
+
 # Create work library
 vlib work
 
-# Compile SystemVerilog files with access enabled
-vlog -sv +acc task2.sv -Lf altera_mf_ver
-vlog -sv +acc task1.sv -Lf altera_mf_ver
-vlog -sv +acc dff.sv -Lf altera_mf_ver
-vlog -sv +acc seg7.sv -Lf altera_mf_ver
-vlog -sv +acc task1_tb.sv -Lf altera_mf_ver
-vlog -sv +acc DE1_SoC.sv -Lf altera_mf_ver
-vlog -sv +acc DE1_SoC_tb.sv -Lf altera_mf_ver
-vlog -sv +acc ram32x3.qip -Lf altera_mf_ver
-vlog -sv +acc ram32x3.v -Lf altera_mf_ver
+# Compile all Verilog files
+vlog "./seg7.sv"
+vlog "./task1.sv"
+vlog "./task2.sv"
+vlog "./ram32x3.v" -Lf altera_mf_ver
+vlog "./ram32x3port2.v" -Lf altera_mf_ver
+vlog "./lights.sv"
+vlog "./DE1_SoC.sv"
+vlog "./DE1_SoC_tb.sv"   
 
-# Launch simulation with access enabled
-vsim -voptargs="+acc" -t 1ps -Lf altera_mf_ver work.task1_tb
+# Run simulation on DE1_SoC_tb
+#vsim -voptargs="+acc" -t 1ps -lib work DE1_SoC_tb 
+vsim -voptargs="+acc" -t 1ps -lib work DE1_SoC_tb -L altera_mf_ver
 
-# Load waveform view
-do wave.do
+
+# Load waveform display config
+do wave.do              ;# <-- renamed wave file to match testbench
+
+# Set views
+view wave
+view structure
+view signals
 
 # Run simulation
 run -all

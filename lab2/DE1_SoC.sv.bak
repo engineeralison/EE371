@@ -1,18 +1,243 @@
-/* Top-level module for LandsLand hardware connections to implement the parking lot system.*/
+// top level module for task 3 which implements 2 different 32x3 ram memory modules
+// displays writing address on HEX4-5, reading address on HEX2-3 (only affects
+// the ram32x3port2 module), signal to input on HEX1, and dataoutput on HEX0
+// switching module input is SW9, address inputs are SW4-8, data inputs are SW1-3
+// and write signal input is SW0
 
-module DE1_SoC (CLOCK_50, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, LEDR, V_GPIO);
-
-	input  logic		 CLOCK_50;	// 50MHz clock
-	output logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;	// active low
-	output logic [9:0] LEDR;
-	inout  logic [35:0] V_GPIO;	// expansion header 0 (LabsLand board)
+`timescale 1 ps / 1 ps
+module DE1_SoC (CLOCK_50, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, KEY, LEDR, SW);
 	
-    // Turn off all 7-seg displays (active low: 1 = off, 0 = on)
-	assign HEX0 = 7'b1111111;
-	assign HEX1 = 7'b1111111;
-	assign HEX2 = 7'b1111111;
-	assign HEX3 = 7'b1111111;
-	assign HEX4 = 7'b1111111;
-	assign HEX5 = 7'b1111111;
+	// input signals
+	input  logic		 CLOCK_50;	// 50MHz clock
+	input logic [9:0] SW; 
+	input logic [3:0] KEY;
+	
+	output logic [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5;	// active low
+	output logic [9:0] LEDR; // forgot to remove haha
+	
+	logic [2:0] DataIn, DataOut, temp1, temp2; // temp variables used in switching modules
+	logic [4:0] Address, rdaddress;
+	// temp3, temp4, and null are used for switching modules with the Write signal
+	logic Write, temp3, temp4, nul; 
+	
+	// assigning inputs to modules to switches
+	assign DataIn = SW[3:1]; 
+	assign Write = SW[0];
+	assign reset = ~KEY[0];
+	assign Address = SW[8:4];
+	
+	// assigning variables for switching modules
+	assign nul = 0;
+	assign temp3 = (SW[9]) ? nul : Write;
+	assign temp4 = (SW[9]) ? Write : nul;
+	assign DataOut = (SW[9]) ? temp2 : temp1;
+	
+	// setting lights
+	lights3in test1 (DataIn, HEX1);
+	lights3in test2 (DataOut, HEX0);
+	lights5in test (SW[8:4], HEX4, HEX5);
+	lights5in testpls (rdaddress, HEX2, HEX3);
+	
+	// creating the counter for the ram port2 module
+	always_ff @(posedge CLOCK_50) begin
+		if (reset) begin
+			rdaddress <= 5'b0;
+		end
+		else begin
+			rdaddress <= rdaddress + 5'b1;
+		end
+	end
+	
+	// calling both modules
+	task2 pls (Address, CLOCK_50, DataIn, temp3, temp1);
+	ram32x3port2 idk (CLOCK_50, DataIn, rdaddress, Address, temp4, temp2);
 
 endmodule  // DE1_SoC
+
+// 7 segment light display for 2 HEXs - goes from 0 to 31
+module lights5in (in, HEX0, HEX1);
+	
+	input logic [4:0] in;
+	output logic [6:0] HEX0, HEX1;
+	
+	always_comb begin
+		case (in)
+			5'b00000: begin // 0
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b1000000;
+			end
+			5'b00001: begin // 1
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b1001111;
+			end
+			5'b00010: begin // 2
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b0100100;
+			end
+			5'b00011: begin // 3
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b0110000;
+			end
+			5'b00100: begin // 4
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b0011001;
+			end
+			5'b00101: begin // 5
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b0010010;
+			end
+			5'b00110: begin // 6
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b0000010;
+			end
+			5'b00111: begin // 7
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b1111000;
+			end
+			5'b01000: begin // 8
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b0000000;	
+			end
+			5'b01001: begin // 9
+				HEX1 = 7'b1000000;
+				HEX0 = 7'b0011000;
+			end
+			5'b01010: begin // 10
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b1000000;	
+			end
+			5'b01011: begin // 11
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b1001111;
+			end
+			5'b01100: begin // 12
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b0100100;
+			end
+			5'b01101: begin // 13
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b0110000;
+			end
+			5'b01110: begin // 14
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b0011001;	
+			end
+			5'b01111: begin // 15
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b0010010;
+			end
+			5'b10000: begin // 16
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b0000010;
+			end
+			5'b10001: begin // 17
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b1111000;
+			end
+			5'b10010: begin // 18
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b0000000;	
+			end
+			5'b10011: begin // 19
+				HEX1 = 7'b1001111;
+				HEX0 = 7'b0011000;
+			end
+			5'b10100: begin // 20
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b1000000;
+			end
+			5'b10101: begin // 21
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b1001111;
+			end
+			5'b10110: begin // 22
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b0100100;
+			end
+			5'b10111: begin // 23
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b0110000;
+			end
+			5'b11000: begin // 24
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b0011001;
+			end
+			5'b11001: begin // 25
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b0010010;
+			end
+			5'b11010: begin // 26
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b0000010;
+			end
+			5'b11011: begin // 27
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b1111000;
+			end
+			5'b11100: begin // 28
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b0000000;	
+			end
+			5'b11101: begin // 29
+				HEX1 = 7'b0100100;
+				HEX0 = 7'b0011000;
+			end
+			5'b11110: begin // 30
+				HEX1 = 7'b0110000;
+				HEX0 = 7'b1000000;
+			end
+			5'b11111: begin // 31
+				HEX1 = 7'b0110000;
+				HEX0 = 7'b1001111;
+			end
+			
+			default: begin
+				HEX1 = 7'hF;
+				HEX0 = 7'hF;
+			end
+		endcase 
+	end
+	
+endmodule 
+
+
+// seven segment light display - goes from 0 to 7
+module lights3in (in, HEX0);
+	
+	input logic [2:0] in;
+	output logic [6:0] HEX0;
+	
+	always_comb begin
+		case (in)
+			3'b00000: begin // 0
+				HEX0 = 7'b1000000;
+			end
+			3'b00001: begin // 1
+				HEX0 = 7'b1001111;
+			end
+			3'b00010: begin // 2
+				HEX0 = 7'b0100100;
+			end
+			3'b00011: begin // 3
+				HEX0 = 7'b0110000;
+			end
+			3'b00100: begin // 4
+				HEX0 = 7'b0011001;
+			end
+			3'b00101: begin // 5
+				HEX0 = 7'b0010010;
+			end
+			3'b00110: begin // 6
+				HEX0 = 7'b0000010;
+			end
+			3'b00111: begin // 7
+				HEX0 = 7'b1111000;
+			end
+			default: HEX0 = 7'hF;
+			
+		endcase 
+	end
+	
+endmodule
+
+

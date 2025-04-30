@@ -2,35 +2,35 @@
 do runlab.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:53:05 on Apr 10,2025
+# Start time: 15:40:15 on Apr 16,2025
 # vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
 # -- Compiling module fullAdder
 # 
 # Top level modules:
 # 	fullAdder
-# End time: 22:53:05 on Apr 10,2025, Elapsed time: 0:00:00
+# End time: 15:40:15 on Apr 16,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:53:05 on Apr 10,2025
+# Start time: 15:40:15 on Apr 16,2025
 # vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
 # -- Compiling module fullAdder_tb
 # 
 # Top level modules:
 # 	fullAdder_tb
-# End time: 22:53:05 on Apr 10,2025, Elapsed time: 0:00:00
+# End time: 15:40:15 on Apr 16,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:53:05 on Apr 10,2025
+# Start time: 15:40:15 on Apr 16,2025
 # vlog -reportprogress 300 -sv "+acc" carCounter.sv 
 # -- Compiling module carCounter
 # -- Compiling module carCounter_tb
 # 
 # Top level modules:
 # 	carCounter_tb
-# End time: 22:53:05 on Apr 10,2025, Elapsed time: 0:00:00
+# End time: 15:40:16 on Apr 16,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:53:05 on Apr 10,2025
+# Start time: 15:40:16 on Apr 16,2025
 # vlog -reportprogress 300 -sv "+acc" carDetection.sv 
 # -- Compiling module carDetection
 # ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
@@ -38,666 +38,45 @@ do runlab.do
 # 
 # Top level modules:
 # 	carDetection_tb
-# End time: 22:53:05 on Apr 10,2025, Elapsed time: 0:00:00
+# End time: 15:40:16 on Apr 16,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:53:05 on Apr 10,2025
+# Start time: 15:40:16 on Apr 16,2025
 # vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
 # -- Compiling module DE1_SoC
 # 
 # Top level modules:
 # 	DE1_SoC
-# End time: 22:53:05 on Apr 10,2025, Elapsed time: 0:00:00
+# End time: 15:40:16 on Apr 16,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:53:05 on Apr 10,2025
+# Start time: 15:40:16 on Apr 16,2025
 # vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
 # -- Compiling module DE1_SoC_tb
 # 
 # Top level modules:
 # 	DE1_SoC_tb
-# End time: 22:53:05 on Apr 10,2025, Elapsed time: 0:00:00
+# End time: 15:40:16 on Apr 16,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" -t 1ps work.DE1_SoC_tb 
-# Start time: 22:53:05 on Apr 10,2025
+# Start time: 15:40:16 on Apr 16,2025
 # Loading sv_std.std
 # Loading work.DE1_SoC_tb
 # Loading work.DE1_SoC
 # Loading work.carDetection
 # Loading work.carCounter
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/enter_out'.
-# Executing ONERROR command at macro ./wave.do line 30
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/exit_out'.
-# Executing ONERROR command at macro ./wave.do line 31
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/count_out'.
-# Executing ONERROR command at macro ./wave.do line 32
-# ** Note: $stop    : DE1_SoC_tb.sv(85)
-#    Time: 20500 ps  Iteration: 1  Instance: /DE1_SoC_tb
-# Break in Module DE1_SoC_tb at DE1_SoC_tb.sv line 85
-do r
-# Cannot open macro file: r
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:10:01 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
-# -- Compiling module fullAdder
-# 
-# Top level modules:
-# 	fullAdder
-# End time: 23:10:02 on Apr 10,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:10:02 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
-# -- Compiling module fullAdder_tb
-# 
-# Top level modules:
-# 	fullAdder_tb
-# End time: 23:10:02 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:10:02 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carCounter.sv 
-# -- Compiling module carCounter
-# -- Compiling module carCounter_tb
-# 
-# Top level modules:
-# 	carCounter_tb
-# End time: 23:10:02 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:10:02 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carDetection.sv 
-# -- Compiling module carDetection
-# ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
-# -- Compiling module carDetection_tb
-# 
-# Top level modules:
-# 	carDetection_tb
-# End time: 23:10:02 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:10:02 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# 
-# Top level modules:
-# 	DE1_SoC
-# End time: 23:10:02 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:10:02 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
-# -- Compiling module DE1_SoC_tb
-# 
-# Top level modules:
-# 	DE1_SoC_tb
-# End time: 23:10:02 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:10:04 on Apr 10,2025, Elapsed time: 0:16:59
-# Errors: 10, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps work.DE1_SoC_tb 
-# Start time: 23:10:04 on Apr 10,2025
-# Loading sv_std.std
-# Loading work.DE1_SoC_tb
-# Loading work.DE1_SoC
-# Loading work.carDetection
-# Loading work.carCounter
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/enter_out'.
-# Executing ONERROR command at macro ./wave.do line 30
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/exit_out'.
-# Executing ONERROR command at macro ./wave.do line 31
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/count_out'.
-# Executing ONERROR command at macro ./wave.do line 32
-# ** Note: $stop    : DE1_SoC_tb.sv(85)
-#    Time: 20500 ps  Iteration: 1  Instance: /DE1_SoC_tb
-# Break in Module DE1_SoC_tb at DE1_SoC_tb.sv line 85
-add wave -position end  sim:/DE1_SoC_tb/enter_out
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:29:06 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
-# -- Compiling module fullAdder
-# 
-# Top level modules:
-# 	fullAdder
-# End time: 23:29:06 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:29:06 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
-# -- Compiling module fullAdder_tb
-# 
-# Top level modules:
-# 	fullAdder_tb
-# End time: 23:29:06 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:29:07 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carCounter.sv 
-# -- Compiling module carCounter
-# -- Compiling module carCounter_tb
-# 
-# Top level modules:
-# 	carCounter_tb
-# End time: 23:29:07 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:29:07 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carDetection.sv 
-# -- Compiling module carDetection
-# ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
-# -- Compiling module carDetection_tb
-# 
-# Top level modules:
-# 	carDetection_tb
-# End time: 23:29:07 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:29:07 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# 
-# Top level modules:
-# 	DE1_SoC
-# End time: 23:29:07 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:29:07 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
-# -- Compiling module DE1_SoC_tb
-# 
-# Top level modules:
-# 	DE1_SoC_tb
-# End time: 23:29:07 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:29:10 on Apr 10,2025, Elapsed time: 0:19:06
-# Errors: 9, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps work.DE1_SoC_tb 
-# Start time: 23:29:10 on Apr 10,2025
-# Loading sv_std.std
-# Loading work.DE1_SoC_tb
-# Loading work.DE1_SoC
-# Loading work.carDetection
-# Loading work.carCounter
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/enter_out'.
-# Executing ONERROR command at macro ./wave.do line 30
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/exit_out'.
-# Executing ONERROR command at macro ./wave.do line 31
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/count_out'.
-# Executing ONERROR command at macro ./wave.do line 32
-# [INFO] Expect CLEAR at time                  450
-# [INFO] Expect FULL at time                 6850
-# [INFO] Expect count = 11 at time                 8850
-# [INFO] Expect CLEAR again at time                13250
-# ** Note: $stop    : DE1_SoC_tb.sv(93)
-#    Time: 14250 ps  Iteration: 1  Instance: /DE1_SoC_tb
-# Break in Module DE1_SoC_tb at DE1_SoC_tb.sv line 93
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:30:26 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
-# -- Compiling module fullAdder
-# 
-# Top level modules:
-# 	fullAdder
-# End time: 23:30:26 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:30:26 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
-# -- Compiling module fullAdder_tb
-# 
-# Top level modules:
-# 	fullAdder_tb
-# End time: 23:30:26 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:30:26 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carCounter.sv 
-# -- Compiling module carCounter
-# -- Compiling module carCounter_tb
-# 
-# Top level modules:
-# 	carCounter_tb
-# End time: 23:30:26 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:30:26 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carDetection.sv 
-# -- Compiling module carDetection
-# ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
-# -- Compiling module carDetection_tb
-# 
-# Top level modules:
-# 	carDetection_tb
-# End time: 23:30:26 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:30:26 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# 
-# Top level modules:
-# 	DE1_SoC
-# End time: 23:30:26 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:30:27 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
-# -- Compiling module DE1_SoC_tb
-# ** Error (suppressible): DE1_SoC_tb.sv(68): (vlog-2388) 'i' already declared in this scope (DE1_SoC_tb).
-# End time: 23:30:27 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 10
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv +acc DE1_SoC_tb.sv"
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:31:46 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
-# -- Compiling module fullAdder
-# 
-# Top level modules:
-# 	fullAdder
-# End time: 23:31:46 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:31:46 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
-# -- Compiling module fullAdder_tb
-# 
-# Top level modules:
-# 	fullAdder_tb
-# End time: 23:31:46 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:31:46 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carCounter.sv 
-# -- Compiling module carCounter
-# -- Compiling module carCounter_tb
-# 
-# Top level modules:
-# 	carCounter_tb
-# End time: 23:31:46 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:31:46 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carDetection.sv 
-# -- Compiling module carDetection
-# ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
-# -- Compiling module carDetection_tb
-# 
-# Top level modules:
-# 	carDetection_tb
-# End time: 23:31:46 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:31:47 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# 
-# Top level modules:
-# 	DE1_SoC
-# End time: 23:31:47 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:31:47 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
-# -- Compiling module DE1_SoC_tb
-# ** Error (suppressible): DE1_SoC_tb.sv(59): (vlog-2388) 'i' already declared in this scope (DE1_SoC_tb).
-# End time: 23:31:47 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 10
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv +acc DE1_SoC_tb.sv"
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:32 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
-# -- Compiling module fullAdder
-# 
-# Top level modules:
-# 	fullAdder
-# End time: 23:32:32 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:32 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
-# -- Compiling module fullAdder_tb
-# 
-# Top level modules:
-# 	fullAdder_tb
-# End time: 23:32:32 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:32 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carCounter.sv 
-# -- Compiling module carCounter
-# -- Compiling module carCounter_tb
-# 
-# Top level modules:
-# 	carCounter_tb
-# End time: 23:32:32 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:32 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carDetection.sv 
-# -- Compiling module carDetection
-# ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
-# -- Compiling module carDetection_tb
-# 
-# Top level modules:
-# 	carDetection_tb
-# End time: 23:32:33 on Apr 10,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:33 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# 
-# Top level modules:
-# 	DE1_SoC
-# End time: 23:32:33 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:33 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
-# -- Compiling module DE1_SoC_tb
-# ** Error: DE1_SoC_tb.sv(75): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
-# End time: 23:32:33 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 10
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv +acc DE1_SoC_tb.sv"
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:41:12 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
-# -- Compiling module fullAdder
-# 
-# Top level modules:
-# 	fullAdder
-# End time: 23:41:13 on Apr 10,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:41:13 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
-# -- Compiling module fullAdder_tb
-# 
-# Top level modules:
-# 	fullAdder_tb
-# End time: 23:41:13 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:41:13 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carCounter.sv 
-# -- Compiling module carCounter
-# -- Compiling module carCounter_tb
-# 
-# Top level modules:
-# 	carCounter_tb
-# End time: 23:41:13 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:41:13 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carDetection.sv 
-# -- Compiling module carDetection
-# ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
-# -- Compiling module carDetection_tb
-# 
-# Top level modules:
-# 	carDetection_tb
-# End time: 23:41:13 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:41:13 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# 
-# Top level modules:
-# 	DE1_SoC
-# End time: 23:41:13 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:41:13 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
-# -- Compiling module DE1_SoC_tb
-# ** Error: DE1_SoC_tb.sv(75): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
-# ** Error: DE1_SoC_tb.sv(75): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
-# ** Error: DE1_SoC_tb.sv(75): Invalid context for genvar i. A genvar can be used only inside of the generate loop that it indexes.
-# End time: 23:41:13 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 10
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv +acc DE1_SoC_tb.sv"
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:42:06 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
-# -- Compiling module fullAdder
-# 
-# Top level modules:
-# 	fullAdder
-# End time: 23:42:07 on Apr 10,2025, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:42:07 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
-# -- Compiling module fullAdder_tb
-# 
-# Top level modules:
-# 	fullAdder_tb
-# End time: 23:42:07 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:42:07 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carCounter.sv 
-# -- Compiling module carCounter
-# -- Compiling module carCounter_tb
-# 
-# Top level modules:
-# 	carCounter_tb
-# End time: 23:42:07 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:42:07 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carDetection.sv 
-# -- Compiling module carDetection
-# ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
-# -- Compiling module carDetection_tb
-# 
-# Top level modules:
-# 	carDetection_tb
-# End time: 23:42:07 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:42:07 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# 
-# Top level modules:
-# 	DE1_SoC
-# End time: 23:42:07 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:42:07 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
-# -- Compiling module DE1_SoC_tb
-# ** Error: DE1_SoC_tb.sv(75): Illegal declaration after the statement near line '72'.  Declarations must precede statements.  Look for stray semicolons.
-# ** Error: (vlog-13069) DE1_SoC_tb.sv(75): near ")": syntax error, unexpected ')', expecting ';'.
-# ** Error: DE1_SoC_tb.sv(82): (vlog-13161) unexpected '$stop', expecting elaboration system task $fatal/$error/$warning/$info.
-# ** Error: (vlog-13069) DE1_SoC_tb.sv(83): near "end": syntax error, unexpected end.
-# End time: 23:42:07 on Apr 10,2025, Elapsed time: 0:00:00
+# ** Error: (vsim-3389) DE1_SoC_tb.sv(38): Port 'enter_out' not found in the connected module (10th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_tb/dut File: DE1_SoC.sv
+# ** Error: (vsim-3389) DE1_SoC_tb.sv(38): Port 'exit_out' not found in the connected module (11th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_tb/dut File: DE1_SoC.sv
+# ** Error: (vsim-3389) DE1_SoC_tb.sv(38): Port 'count_out' not found in the connected module (12th connection).
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_tb/dut File: DE1_SoC.sv
+# ** Fatal: (vsim-3365) DE1_SoC_tb.sv(38): Too many port connections. Expected 9, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /DE1_SoC_tb/dut File: DE1_SoC.sv
+# FATAL ERROR while loading design
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./runlab.do PAUSED at line 13
+# End time: 15:40:29 on Apr 16,2025, Elapsed time: 0:00:13
 # Errors: 4, Warnings: 0
-# ** Error: C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./runlab.do line 10
-# C:/intelFPGA_lite/17.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv +acc DE1_SoC_tb.sv"
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:44:38 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
-# -- Compiling module fullAdder
-# 
-# Top level modules:
-# 	fullAdder
-# End time: 23:44:38 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:44:38 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
-# -- Compiling module fullAdder_tb
-# 
-# Top level modules:
-# 	fullAdder_tb
-# End time: 23:44:38 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:44:38 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carCounter.sv 
-# -- Compiling module carCounter
-# -- Compiling module carCounter_tb
-# 
-# Top level modules:
-# 	carCounter_tb
-# End time: 23:44:38 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:44:38 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" carDetection.sv 
-# -- Compiling module carDetection
-# ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
-# -- Compiling module carDetection_tb
-# 
-# Top level modules:
-# 	carDetection_tb
-# End time: 23:44:38 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:44:39 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# 
-# Top level modules:
-# 	DE1_SoC
-# End time: 23:44:39 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:44:39 on Apr 10,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
-# -- Compiling module DE1_SoC_tb
-# 
-# Top level modules:
-# 	DE1_SoC_tb
-# End time: 23:44:39 on Apr 10,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 23:44:46 on Apr 10,2025, Elapsed time: 0:15:36
-# Errors: 32, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps work.DE1_SoC_tb 
-# Start time: 23:44:47 on Apr 10,2025
-# Loading sv_std.std
-# Loading work.DE1_SoC_tb
-# Loading work.DE1_SoC
-# Loading work.carDetection
-# Loading work.carCounter
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/enter_out'.
-# Executing ONERROR command at macro ./wave.do line 30
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/exit_out'.
-# Executing ONERROR command at macro ./wave.do line 31
-# ** Error: (vish-4014) No objects found matching '/DE1_SoC_tb/dut/count_out'.
-# Executing ONERROR command at macro ./wave.do line 32
-# ** Note: $stop    : DE1_SoC_tb.sv(102)
-#    Time: 147500 ps  Iteration: 1  Instance: /DE1_SoC_tb
-# Break in Module DE1_SoC_tb at DE1_SoC_tb.sv line 102
-add wave -position end  sim:/DE1_SoC_tb/count_out
-do runlab.do
-# ** Warning: (vlib-34) Library already exists at "work".
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:06:06 on Apr 11,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder.sv 
-# -- Compiling module fullAdder
-# 
-# Top level modules:
-# 	fullAdder
-# End time: 00:06:06 on Apr 11,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:06:06 on Apr 11,2025
-# vlog -reportprogress 300 -sv "+acc" fullAdder_tb.sv 
-# -- Compiling module fullAdder_tb
-# 
-# Top level modules:
-# 	fullAdder_tb
-# End time: 00:06:06 on Apr 11,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:06:06 on Apr 11,2025
-# vlog -reportprogress 300 -sv "+acc" carCounter.sv 
-# -- Compiling module carCounter
-# -- Compiling module carCounter_tb
-# 
-# Top level modules:
-# 	carCounter_tb
-# End time: 00:06:06 on Apr 11,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:06:06 on Apr 11,2025
-# vlog -reportprogress 300 -sv "+acc" carDetection.sv 
-# -- Compiling module carDetection
-# ** Note: (vlog-143) Recognized 1 FSM in module "carDetection(verilog)".
-# -- Compiling module carDetection_tb
-# 
-# Top level modules:
-# 	carDetection_tb
-# End time: 00:06:06 on Apr 11,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:06:07 on Apr 11,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC.sv 
-# -- Compiling module DE1_SoC
-# 
-# Top level modules:
-# 	DE1_SoC
-# End time: 00:06:07 on Apr 11,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:06:07 on Apr 11,2025
-# vlog -reportprogress 300 -sv "+acc" DE1_SoC_tb.sv 
-# -- Compiling module DE1_SoC_tb
-# 
-# Top level modules:
-# 	DE1_SoC_tb
-# End time: 00:06:07 on Apr 11,2025, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# End time: 00:06:13 on Apr 11,2025, Elapsed time: 0:21:26
-# Errors: 9, Warnings: 0
-# vsim -voptargs=""+acc"" -t 1ps work.DE1_SoC_tb 
-# Start time: 00:06:13 on Apr 11,2025
-# Loading sv_std.std
-# Loading work.DE1_SoC_tb
-# Loading work.DE1_SoC
-# Loading work.carDetection
-# Loading work.carCounter
-# ** Note: $stop    : DE1_SoC_tb.sv(89)
-#    Time: 147500 ps  Iteration: 1  Instance: /DE1_SoC_tb
-# Break in Module DE1_SoC_tb at DE1_SoC_tb.sv line 89
-# End time: 23:10:40 on Apr 11,2025, Elapsed time: 23:04:27
-# Errors: 0, Warnings: 0
