@@ -1,0 +1,98 @@
+module part2 (
+    input CLOCK_50,
+    input CLOCK2_50,
+    input [9:0] SW,
+    input [3:0] KEY,
+    output FPGA_I2C_SCLK,
+    inout  FPGA_I2C_SDAT,
+    output AUD_XCK,
+    input  AUD_DACLRCK, AUD_ADCLRCK, AUD_BCLK,
+    input  AUD_ADCDAT,
+    output AUD_DACDAT
+);
+
+    // Reset logic
+    wire reset = ~KEY[0];
+
+    // Audio CODEC interface wires
+    wire read_ready, write_ready;
+    wire [23:0] readdata_left, readdata_right;
+    reg  [23:0] writedata_left, writedata_right;
+    wire read, write;
+
+    // ROM logic (Task 2)
+    wire [23:0] rom_data;
+    logic [15:0] rom_address;
+    parameter ROM_SIZE = 48000;
+
+    // ROM instance (generated via IP Catalog)
+    note_data_ROM rom_inst (
+        .clock(CLOCK_50),
+        .address(rom_address),
+        .q(rom_data)
+    );
+
+    // ROM address counter – increment once per write when SW[9]=1
+    always_ff @(posedge CLOCK_50) begin
+        if (reset) begin
+            rom_address <= 0;
+        end else if (SW[9] && write_ready) begin
+            if (rom_address >= ROM_SIZE - 1)
+                rom_address <= 0;
+            else
+                rom_address <= rom_address + 1;
+        end
+    end
+
+    // Write data selection: passthrough vs ROM playback
+    always_comb begin
+        if (SW[9]) begin
+            // Task 2: ROM tone output
+            writedata_left  = rom_data;
+            writedata_right = rom_data;
+        end else begin
+            // Task 1: passthrough input
+            writedata_left  = readdata_left;
+            writedata_right = readdata_right;
+        end
+    end
+
+    // Read/Write signal logic
+    assign write = write_ready;
+    assign read  = SW[9] ? read_ready : (read_ready & write_ready);
+
+    ///////////////////////////
+    // Audio system modules
+    ///////////////////////////
+    clock_generator clk_gen (
+        .CLOCK(CLOCK2_50),
+        .reset(reset),
+        .AUD_XCK(AUD_XCK)
+    );
+
+    audio_and_video_config av_cfg (
+        .CLOCK_50(CLOCK_50),
+        .reset(reset),
+        .FPGA_I2C_SDAT(FPGA_I2C_SDAT),
+        .FPGA_I2C_SCLK(FPGA_I2C_SCLK)
+    );
+
+    audio_codec codec (
+        .CLOCK_50(CLOCK_50),
+        .reset(reset),
+        .read(read),
+        .write(write),
+        .writedata_left(writedata_left),
+        .writedata_right(writedata_right),
+        .AUD_ADCDAT(AUD_ADCDAT),
+        .AUD_BCLK(AUD_BCLK),
+        .AUD_ADCLRCK(AUD_ADCLRCK),
+        .AUD_DACLRCK(AUD_DACLRCK),
+        .read_ready(read_ready),
+        .write_ready(write_ready),
+        .readdata_left(readdata_left),
+        .readdata_right(readdata_right),
+        .AUD_DACDAT(AUD_DACDAT)
+    );
+
+endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for part1
-Tue Apr 29 14:57:26 2025
+Thu May 01 22:56:05 2025
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -14,41 +14,46 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |part1|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|s_i2c_transceiver
- 10. State Machine - |part1|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|s_i2c_auto_init
- 11. Registers Removed During Synthesis
- 12. General Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Source assignments for audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
- 15. Source assignments for audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
- 16. Source assignments for audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
- 17. Source assignments for audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
- 18. Parameter Settings for User Entity Instance: clock_generator:my_clock_gen
- 19. Parameter Settings for User Entity Instance: clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio
- 20. Parameter Settings for User Entity Instance: audio_and_video_config:cfg
- 21. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz
- 22. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize
- 23. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller
- 24. Parameter Settings for User Entity Instance: audio_codec:codec
- 25. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
- 26. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
- 27. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
- 28. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
- 29. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
- 30. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
- 31. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
- 32. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
- 33. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
- 34. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
- 35. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
- 36. altpll Parameter Settings by Entity Instance
- 37. scfifo Parameter Settings by Entity Instance
- 38. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller"
- 39. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize"
- 40. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz"
- 41. Post-Synthesis Netlist Statistics for Top Partition
- 42. Elapsed Time Per Partition
- 43. Analysis & Synthesis Messages
+  9. Analysis & Synthesis IP Cores Summary
+ 10. State Machine - |part1|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|s_i2c_transceiver
+ 11. State Machine - |part1|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|s_i2c_auto_init
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Source assignments for part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated
+ 16. Source assignments for audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
+ 17. Source assignments for audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
+ 18. Source assignments for audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
+ 19. Source assignments for audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram
+ 20. Parameter Settings for User Entity Instance: part2:task2_inst
+ 21. Parameter Settings for User Entity Instance: part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component
+ 22. Parameter Settings for User Entity Instance: clock_generator:my_clock_gen
+ 23. Parameter Settings for User Entity Instance: clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio
+ 24. Parameter Settings for User Entity Instance: audio_and_video_config:cfg
+ 25. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz
+ 26. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize
+ 27. Parameter Settings for User Entity Instance: audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller
+ 28. Parameter Settings for User Entity Instance: audio_codec:codec
+ 29. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
+ 30. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
+ 31. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
+ 32. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 33. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
+ 34. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 35. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
+ 36. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
+ 37. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 38. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
+ 39. Parameter Settings for User Entity Instance: audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 40. altsyncram Parameter Settings by Entity Instance
+ 41. altpll Parameter Settings by Entity Instance
+ 42. scfifo Parameter Settings by Entity Instance
+ 43. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller"
+ 44. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize"
+ 45. Port Connectivity Checks: "audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz"
+ 46. Post-Synthesis Netlist Statistics for Top Partition
+ 47. Elapsed Time Per Partition
+ 48. Analysis & Synthesis Messages
 
 
 
@@ -75,16 +80,16 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue Apr 29 14:57:26 2025       ;
+; Analysis & Synthesis Status     ; Successful - Thu May 01 22:56:05 2025       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; part1                                       ;
 ; Top-level Entity Name           ; part1                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 293                                         ;
+; Total registers                 ; 315                                         ;
 ; Total pins                      ; 24                                          ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 12,288                                      ;
+; Total block memory bits         ; 1,585,152                                   ;
 ; Total DSP Blocks                ; 0                                           ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -195,47 +200,63 @@ agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processor 3            ;   0.0%      ;
+;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                   ;
-+------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                             ; Library ;
-+------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
-; part1.v                            ; yes             ; User Verilog HDL File        ; C:/Users/Egghead/EE371/lab3/part1.v                                      ;         ;
-; clock_generator.v                  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/clock_generator.v                            ;         ;
-; altpll.tdf                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altpll.tdf        ;         ;
-; aglobal170.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc    ;         ;
-; stratix_pll.inc                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
-; stratixii_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
-; cycloneii_pll.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
-; db/altpll_1uu1.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab3/db/altpll_1uu1.tdf                           ;         ;
-; audio_and_video_config.v           ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/audio_and_video_config.v                     ;         ;
-; altera_up_slow_clock_generator.v   ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/altera_up_slow_clock_generator.v             ;         ;
-; altera_up_i2c_av_auto_initialize.v ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/altera_up_i2c_av_auto_initialize.v           ;         ;
-; altera_up_i2c.v                    ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/altera_up_i2c.v                              ;         ;
-; audio_codec.v                      ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/audio_codec.v                                ;         ;
-; altera_up_clock_edge.v             ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/altera_up_clock_edge.v                       ;         ;
-; altera_up_audio_in_deserializer.v  ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/altera_up_audio_in_deserializer.v            ;         ;
-; altera_up_audio_bit_counter.v      ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/altera_up_audio_bit_counter.v                ;         ;
-; altera_up_sync_fifo.v              ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/altera_up_sync_fifo.v                        ;         ;
-; scfifo.tdf                         ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/scfifo.tdf        ;         ;
-; a_regfifo.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_regfifo.inc     ;         ;
-; a_dpfifo.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_dpfifo.inc      ;         ;
-; a_i2fifo.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_i2fifo.inc      ;         ;
-; a_fffifo.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_fffifo.inc      ;         ;
-; a_f2fifo.inc                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_f2fifo.inc      ;         ;
-; db/scfifo_8ba1.tdf                 ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab3/db/scfifo_8ba1.tdf                           ;         ;
-; db/a_dpfifo_r2a1.tdf               ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab3/db/a_dpfifo_r2a1.tdf                         ;         ;
-; db/altsyncram_p3i1.tdf             ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab3/db/altsyncram_p3i1.tdf                       ;         ;
-; db/cmpr_6l8.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab3/db/cmpr_6l8.tdf                              ;         ;
-; db/cntr_h2b.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab3/db/cntr_h2b.tdf                              ;         ;
-; db/cntr_u27.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab3/db/cntr_u27.tdf                              ;         ;
-; db/cntr_i2b.tdf                    ; yes             ; Auto-Generated Megafunction  ; C:/Users/Egghead/EE371/lab3/db/cntr_i2b.tdf                              ;         ;
-; altera_up_audio_out_serializer.v   ; yes             ; Auto-Found Verilog HDL File  ; C:/Users/Egghead/EE371/lab3/altera_up_audio_out_serializer.v             ;         ;
-+------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                 ;
++------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path   ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
++------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
+; part1.v                            ; yes             ; User Verilog HDL File                  ; C:/Users/Egghead/EE371/lab3/part1.v                                          ;         ;
+; ROM1PORT.v                         ; yes             ; User Wizard-Generated File             ; C:/Users/Egghead/EE371/lab3/ROM1PORT.v                                       ;         ;
+; part2.sv                           ; yes             ; User SystemVerilog HDL File            ; C:/Users/Egghead/EE371/lab3/part2.sv                                         ;         ;
+; altsyncram.tdf                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc              ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                        ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal170.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/aglobal170.inc        ;         ;
+; a_rdenreg.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_drh1.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/altsyncram_drh1.tdf                           ;         ;
+; note_data.mif                      ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Egghead/EE371/lab3/note_data.mif                                    ;         ;
+; db/decode_61a.tdf                  ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/decode_61a.tdf                                ;         ;
+; db/mux_bhb.tdf                     ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/mux_bhb.tdf                                   ;         ;
+; clock_generator.v                  ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/clock_generator.v                                ;         ;
+; altpll.tdf                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; stratix_pll.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                  ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/altpll_1uu1.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/altpll_1uu1.tdf                               ;         ;
+; audio_and_video_config.v           ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/audio_and_video_config.v                         ;         ;
+; altera_up_slow_clock_generator.v   ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/altera_up_slow_clock_generator.v                 ;         ;
+; altera_up_i2c_av_auto_initialize.v ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/altera_up_i2c_av_auto_initialize.v               ;         ;
+; altera_up_i2c.v                    ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/altera_up_i2c.v                                  ;         ;
+; audio_codec.v                      ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/audio_codec.v                                    ;         ;
+; altera_up_clock_edge.v             ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/altera_up_clock_edge.v                           ;         ;
+; altera_up_audio_in_deserializer.v  ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/altera_up_audio_in_deserializer.v                ;         ;
+; altera_up_audio_bit_counter.v      ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/altera_up_audio_bit_counter.v                    ;         ;
+; altera_up_sync_fifo.v              ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/altera_up_sync_fifo.v                            ;         ;
+; scfifo.tdf                         ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/scfifo.tdf            ;         ;
+; a_regfifo.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_regfifo.inc         ;         ;
+; a_dpfifo.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_dpfifo.inc          ;         ;
+; a_i2fifo.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_i2fifo.inc          ;         ;
+; a_fffifo.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_fffifo.inc          ;         ;
+; a_f2fifo.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/a_f2fifo.inc          ;         ;
+; db/scfifo_8ba1.tdf                 ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/scfifo_8ba1.tdf                               ;         ;
+; db/a_dpfifo_r2a1.tdf               ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/a_dpfifo_r2a1.tdf                             ;         ;
+; db/altsyncram_p3i1.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/altsyncram_p3i1.tdf                           ;         ;
+; db/cmpr_6l8.tdf                    ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/cmpr_6l8.tdf                                  ;         ;
+; db/cntr_h2b.tdf                    ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/cntr_h2b.tdf                                  ;         ;
+; db/cntr_u27.tdf                    ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/cntr_u27.tdf                                  ;         ;
+; db/cntr_i2b.tdf                    ; yes             ; Auto-Generated Megafunction            ; C:/Users/Egghead/EE371/lab3/db/cntr_i2b.tdf                                  ;         ;
+; altera_up_audio_out_serializer.v   ; yes             ; Auto-Found Verilog HDL File            ; C:/Users/Egghead/EE371/lab3/altera_up_audio_out_serializer.v                 ;         ;
++------------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -243,20 +264,20 @@ agreement for further details.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 232            ;
+; Estimate of Logic utilization (ALMs needed) ; 357            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 372            ;
+; Combinational ALUT usage for logic          ; 498            ;
 ;     -- 7 input functions                    ; 6              ;
-;     -- 6 input functions                    ; 78             ;
-;     -- 5 input functions                    ; 91             ;
+;     -- 6 input functions                    ; 201            ;
+;     -- 5 input functions                    ; 73             ;
 ;     -- 4 input functions                    ; 39             ;
-;     -- <=3 input functions                  ; 158            ;
+;     -- <=3 input functions                  ; 179            ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 293            ;
+; Dedicated logic registers                   ; 315            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 24             ;
 ; Total MLAB memory bits                      ; 0              ;
-; Total block memory bits                     ; 12288          ;
+; Total block memory bits                     ; 1585152        ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
@@ -264,80 +285,96 @@ agreement for further details.
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 389            ;
-; Total fan-out                               ; 4118           ;
-; Average fan-out                             ; 5.08           ;
+; Maximum fan-out                             ; 603            ;
+; Total fan-out                               ; 7769           ;
+; Average fan-out                             ; 6.75           ;
 +---------------------------------------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                    ;
-+---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
-; Compilation Hierarchy Node                                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                         ; Entity Name                      ; Library Name ;
-+---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
-; |part1                                                        ; 372 (0)             ; 293 (0)                   ; 12288             ; 0          ; 24   ; 0            ; |part1                                                                                                                                                                                                                      ; part1                            ; work         ;
-;    |audio_and_video_config:cfg|                               ; 102 (2)             ; 65 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_and_video_config:cfg                                                                                                                                                                                           ; audio_and_video_config           ; work         ;
-;       |Altera_UP_I2C:I2C_Controller|                          ; 19 (19)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller                                                                                                                                                              ; Altera_UP_I2C                    ; work         ;
-;       |Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|      ; 66 (66)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize                                                                                                                                          ; Altera_UP_I2C_AV_Auto_Initialize ; work         ;
-;       |Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz| ; 15 (15)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz                                                                                                                                     ; Altera_UP_Slow_Clock_Generator   ; work         ;
-;    |audio_codec:codec|                                        ; 270 (10)            ; 228 (2)                   ; 12288             ; 0          ; 0    ; 0            ; |part1|audio_codec:codec                                                                                                                                                                                                    ; audio_codec                      ; work         ;
-;       |Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer| ; 112 (6)             ; 112 (40)                  ; 6144              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer                                                                                                                                              ; Altera_UP_Audio_In_Deserializer  ; work         ;
-;          |Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|  ; 10 (10)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter                                                                                            ; Altera_UP_Audio_Bit_Counter      ; work         ;
-;          |Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|     ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO                                                                                               ; Altera_UP_SYNC_FIFO              ; work         ;
-;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                              ; scfifo                           ; work         ;
-;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                                   ; scfifo_8ba1                      ; work         ;
-;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (26)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                              ; a_dpfifo_r2a1                    ; work         ;
-;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram      ; altsyncram_p3i1                  ; work         ;
-;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb          ; cntr_h2b                         ; work         ;
-;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr              ; cntr_i2b                         ; work         ;
-;                      |cntr_u27:usedw_counter|                 ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter       ; cntr_u27                         ; work         ;
-;          |Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|    ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO                                                                                              ; Altera_UP_SYNC_FIFO              ; work         ;
-;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                             ; scfifo                           ; work         ;
-;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                                  ; scfifo_8ba1                      ; work         ;
-;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (26)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                             ; a_dpfifo_r2a1                    ; work         ;
-;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram     ; altsyncram_p3i1                  ; work         ;
-;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb         ; cntr_h2b                         ; work         ;
-;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr             ; cntr_i2b                         ; work         ;
-;                      |cntr_u27:usedw_counter|                 ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter      ; cntr_u27                         ; work         ;
-;       |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|   ; 145 (49)            ; 108 (42)                  ; 6144              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                                ; Altera_UP_Audio_Out_Serializer   ; work         ;
-;          |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|    ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                                ; Altera_UP_SYNC_FIFO              ; work         ;
-;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                               ; scfifo                           ; work         ;
-;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                                    ; scfifo_8ba1                      ; work         ;
-;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (24)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                               ; a_dpfifo_r2a1                    ; work         ;
-;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram       ; altsyncram_p3i1                  ; work         ;
-;                      |cmpr_6l8:almost_full_comparer|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cmpr_6l8:almost_full_comparer ; cmpr_6l8                         ; work         ;
-;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb           ; cntr_h2b                         ; work         ;
-;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr               ; cntr_i2b                         ; work         ;
-;                      |cntr_u27:usedw_counter|                 ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter        ; cntr_u27                         ; work         ;
-;          |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                               ; Altera_UP_SYNC_FIFO              ; work         ;
-;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                              ; scfifo                           ; work         ;
-;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                                   ; scfifo_8ba1                      ; work         ;
-;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (24)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                              ; a_dpfifo_r2a1                    ; work         ;
-;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram      ; altsyncram_p3i1                  ; work         ;
-;                      |cmpr_6l8:three_comparison|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cmpr_6l8:three_comparison    ; cmpr_6l8                         ; work         ;
-;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb          ; cntr_h2b                         ; work         ;
-;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr              ; cntr_i2b                         ; work         ;
-;                      |cntr_u27:usedw_counter|                 ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter       ; cntr_u27                         ; work         ;
-;       |Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges|       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges                                                                                                                                                    ; Altera_UP_Clock_Edge             ; work         ;
-;       |Altera_UP_Clock_Edge:Bit_Clock_Edges|                  ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Clock_Edge:Bit_Clock_Edges                                                                                                                                                               ; Altera_UP_Clock_Edge             ; work         ;
-;       |Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges|       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges                                                                                                                                                    ; Altera_UP_Clock_Edge             ; work         ;
-;    |clock_generator:my_clock_gen|                             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|clock_generator:my_clock_gen                                                                                                                                                                                         ; clock_generator                  ; work         ;
-;       |altpll:DE_Clock_Generator_Audio|                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio                                                                                                                                                         ; altpll                           ; work         ;
-;          |altpll_1uu1:auto_generated|                         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio|altpll_1uu1:auto_generated                                                                                                                              ; altpll_1uu1                      ; work         ;
-+---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                                                                     ;
++---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
+; Compilation Hierarchy Node                                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                          ; Entity Name                      ; Library Name ;
++---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
+; |part1                                                        ; 498 (73)            ; 315 (0)                   ; 1585152           ; 0          ; 24   ; 0            ; |part1                                                                                                                                                                                                                       ; part1                            ; work         ;
+;    |audio_and_video_config:cfg|                               ; 101 (2)             ; 65 (9)                    ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_and_video_config:cfg                                                                                                                                                                                            ; audio_and_video_config           ; work         ;
+;       |Altera_UP_I2C:I2C_Controller|                          ; 19 (19)             ; 18 (18)                   ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller                                                                                                                                                               ; Altera_UP_I2C                    ; work         ;
+;       |Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|      ; 66 (66)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize                                                                                                                                           ; Altera_UP_I2C_AV_Auto_Initialize ; work         ;
+;       |Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz| ; 14 (14)             ; 13 (13)                   ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz                                                                                                                                      ; Altera_UP_Slow_Clock_Generator   ; work         ;
+;    |audio_codec:codec|                                        ; 269 (9)             ; 228 (2)                   ; 12288             ; 0          ; 0    ; 0            ; |part1|audio_codec:codec                                                                                                                                                                                                     ; audio_codec                      ; work         ;
+;       |Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer| ; 112 (6)             ; 112 (40)                  ; 6144              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer                                                                                                                                               ; Altera_UP_Audio_In_Deserializer  ; work         ;
+;          |Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|  ; 10 (10)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter                                                                                             ; Altera_UP_Audio_Bit_Counter      ; work         ;
+;          |Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|     ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO                                                                                                ; Altera_UP_SYNC_FIFO              ; work         ;
+;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                               ; scfifo                           ; work         ;
+;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                                    ; scfifo_8ba1                      ; work         ;
+;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (26)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                               ; a_dpfifo_r2a1                    ; work         ;
+;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram       ; altsyncram_p3i1                  ; work         ;
+;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb           ; cntr_h2b                         ; work         ;
+;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr               ; cntr_i2b                         ; work         ;
+;                      |cntr_u27:usedw_counter|                 ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter        ; cntr_u27                         ; work         ;
+;          |Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|    ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO                                                                                               ; Altera_UP_SYNC_FIFO              ; work         ;
+;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                              ; scfifo                           ; work         ;
+;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                                   ; scfifo_8ba1                      ; work         ;
+;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (26)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                              ; a_dpfifo_r2a1                    ; work         ;
+;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram      ; altsyncram_p3i1                  ; work         ;
+;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb          ; cntr_h2b                         ; work         ;
+;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr              ; cntr_i2b                         ; work         ;
+;                      |cntr_u27:usedw_counter|                 ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter       ; cntr_u27                         ; work         ;
+;       |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|   ; 145 (49)            ; 108 (42)                  ; 6144              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                                 ; Altera_UP_Audio_Out_Serializer   ; work         ;
+;          |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|    ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                                 ; Altera_UP_SYNC_FIFO              ; work         ;
+;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                                ; scfifo                           ; work         ;
+;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                                     ; scfifo_8ba1                      ; work         ;
+;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (24)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                                ; a_dpfifo_r2a1                    ; work         ;
+;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram        ; altsyncram_p3i1                  ; work         ;
+;                      |cmpr_6l8:three_comparison|              ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cmpr_6l8:three_comparison      ; cmpr_6l8                         ; work         ;
+;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb            ; cntr_h2b                         ; work         ;
+;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr                ; cntr_i2b                         ; work         ;
+;                      |cntr_u27:usedw_counter|                 ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter         ; cntr_u27                         ; work         ;
+;          |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                                ; Altera_UP_SYNC_FIFO              ; work         ;
+;             |scfifo:Sync_FIFO|                                ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                               ; scfifo                           ; work         ;
+;                |scfifo_8ba1:auto_generated|                   ; 48 (0)              ; 33 (0)                    ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated                                                    ; scfifo_8ba1                      ; work         ;
+;                   |a_dpfifo_r2a1:dpfifo|                      ; 48 (24)             ; 33 (13)                   ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo                               ; a_dpfifo_r2a1                    ; work         ;
+;                      |altsyncram_p3i1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 3072              ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram       ; altsyncram_p3i1                  ; work         ;
+;                      |cmpr_6l8:almost_full_comparer|          ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cmpr_6l8:almost_full_comparer ; cmpr_6l8                         ; work         ;
+;                      |cntr_h2b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_h2b:rd_ptr_msb           ; cntr_h2b                         ; work         ;
+;                      |cntr_i2b:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_i2b:wr_ptr               ; cntr_i2b                         ; work         ;
+;                      |cntr_u27:usedw_counter|                 ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|cntr_u27:usedw_counter        ; cntr_u27                         ; work         ;
+;       |Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges|       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Clock_Edge:ADC_Left_Right_Clock_Edges                                                                                                                                                     ; Altera_UP_Clock_Edge             ; work         ;
+;       |Altera_UP_Clock_Edge:Bit_Clock_Edges|                  ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Clock_Edge:Bit_Clock_Edges                                                                                                                                                                ; Altera_UP_Clock_Edge             ; work         ;
+;       |Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges|       ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|audio_codec:codec|Altera_UP_Clock_Edge:DAC_Left_Right_Clock_Edges                                                                                                                                                     ; Altera_UP_Clock_Edge             ; work         ;
+;    |clock_generator:my_clock_gen|                             ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|clock_generator:my_clock_gen                                                                                                                                                                                          ; clock_generator                  ; work         ;
+;       |altpll:DE_Clock_Generator_Audio|                       ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio                                                                                                                                                          ; altpll                           ; work         ;
+;          |altpll_1uu1:auto_generated|                         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio|altpll_1uu1:auto_generated                                                                                                                               ; altpll_1uu1                      ; work         ;
+;    |part2:task2_inst|                                         ; 55 (22)             ; 22 (16)                   ; 1572864           ; 0          ; 0    ; 0            ; |part1|part2:task2_inst                                                                                                                                                                                                      ; part2                            ; work         ;
+;       |ROM1PORT:rom_inst|                                     ; 33 (0)              ; 6 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |part1|part2:task2_inst|ROM1PORT:rom_inst                                                                                                                                                                                    ; ROM1PORT                         ; work         ;
+;          |altsyncram:altsyncram_component|                    ; 33 (0)              ; 6 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |part1|part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component                                                                                                                                                    ; altsyncram                       ; work         ;
+;             |altsyncram_drh1:auto_generated|                  ; 33 (0)              ; 6 (6)                     ; 1572864           ; 0          ; 0    ; 0            ; |part1|part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated                                                                                                                     ; altsyncram_drh1                  ; work         ;
+;                |decode_61a:rden_decode|                       ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated|decode_61a:rden_decode                                                                                              ; decode_61a                       ; work         ;
+;                |mux_bhb:mux2|                                 ; 24 (24)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |part1|part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated|mux_bhb:mux2                                                                                                        ; mux_bhb                          ; work         ;
++---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                                ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; Name                                                                                                                                                                                                                        ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF  ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
-; audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072 ; None ;
-; audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072 ; None ;
-; audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072 ; None ;
-; audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072 ; None ;
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                                                                  ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+---------+---------------+
+; Name                                                                                                                                                                                                                        ; Type       ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF           ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+---------+---------------+
+; audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM  ; AUTO       ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072    ; None          ;
+; audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM ; AUTO       ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072    ; None          ;
+; audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM   ; AUTO       ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072    ; None          ;
+; audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_8ba1:auto_generated|a_dpfifo_r2a1:dpfifo|altsyncram_p3i1:FIFOram|ALTSYNCRAM  ; AUTO       ; Simple Dual Port ; 128          ; 24           ; 128          ; 24           ; 3072    ; None          ;
+; part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated|ALTSYNCRAM                                                                                                                ; M10K block ; ROM              ; 65536        ; 24           ; --           ; --           ; 1572864 ; note_data.mif ;
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------------+------------------+--------------+--------------+--------------+--------------+---------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                       ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                           ; IP Include File ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------+-----------------+
+; Altera ; ROM: 1-PORT  ; 17.0    ; N/A          ; N/A          ; |part1|part2:task2_inst|ROM1PORT:rom_inst ; ROM1PORT.v      ;
++--------+--------------+---------+--------------+--------------+-------------------------------------------+-----------------+
 
 
 Encoding Type:  One-Hot
@@ -394,12 +431,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 293   ;
-; Number of registers using Synchronous Clear  ; 223   ;
+; Total registers                              ; 315   ;
+; Number of registers using Synchronous Clear  ; 239   ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 174   ;
+; Number of registers using Clock Enable       ; 190   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -409,17 +446,28 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|rom_address_counter[5]                                       ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|current_byte[7]                                                                  ;
-; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[19]                                            ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|rom_address_counter[3]                                       ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|current_byte[5]                                                                  ;
+; 3:1                ; 24 bits   ; 48 LEs        ; 0 LEs                ; 48 LEs                 ; Yes        ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[7]                                             ;
 ; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |part1|audio_and_video_config:cfg|data_to_transfer[7]                                                                                           ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz|clk_counter[2]                                          ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[1] ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|current_bit[2]                                                                   ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 0 LEs                ; 20 LEs                 ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz|clk_counter[3]                                          ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |part1|audio_codec:codec|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[0] ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller|current_bit[1]                                                                   ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |part1|part2:task2_inst|addr[14]                                                                                                                ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|data_out[7]                                                  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|data_out[4]                                                  ;
-; 6:1                ; 23 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[11]                                             ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |part1|audio_and_video_config:cfg|Altera_UP_I2C_AV_Auto_Initialize:Auto_Initialize|data_out[6]                                                  ;
+; 6:1                ; 23 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |part1|audio_codec:codec|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[4]                                              ;
+; 8:1                ; 24 bits   ; 120 LEs       ; 120 LEs              ; 0 LEs                  ; No         ; |part1|part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated|mux_bhb:mux2|l3_w23_n0_mux_dataout     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated ;
++---------------------------------+--------------------+------+------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                         ;
++---------------------------------+--------------------+------+------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                          ;
++---------------------------------+--------------------+------+------------------------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -456,6 +504,77 @@ Encoding Type:  One-Hot
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                                                        ;
 +---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: part2:task2_inst ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; ROM_SIZE       ; 48000 ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+-----------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                ;
++------------------------------------+----------------------+-----------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                             ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                        ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                      ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                             ;
+; OPERATION_MODE                     ; ROM                  ; Untyped                                             ;
+; WIDTH_A                            ; 24                   ; Signed Integer                                      ;
+; WIDTHAD_A                          ; 16                   ; Signed Integer                                      ;
+; NUMWORDS_A                         ; 65536                ; Signed Integer                                      ;
+; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                                             ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                             ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                             ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                             ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                             ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                             ;
+; WIDTH_B                            ; 1                    ; Untyped                                             ;
+; WIDTHAD_B                          ; 1                    ; Untyped                                             ;
+; NUMWORDS_B                         ; 1                    ; Untyped                                             ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                             ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                             ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                             ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                             ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                             ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                             ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                             ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                             ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                             ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                             ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                      ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                             ;
+; RAM_BLOCK_TYPE                     ; M10K                 ; Untyped                                             ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                             ;
+; INIT_FILE                          ; note_data.mif        ; Untyped                                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                             ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                             ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL               ; Untyped                                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL               ; Untyped                                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                             ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                             ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                             ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                             ;
+; CBXI_PARAMETER                     ; altsyncram_drh1      ; Untyped                                             ;
++------------------------------------+----------------------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +---------------------------------------------------------------------------+
@@ -1114,6 +1233,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                               ;
++-------------------------------------------+--------------------------------------------------------------------+
+; Name                                      ; Value                                                              ;
++-------------------------------------------+--------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                  ;
+; Entity Instance                           ; part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; ROM                                                                ;
+;     -- WIDTH_A                            ; 24                                                                 ;
+;     -- NUMWORDS_A                         ; 65536                                                              ;
+;     -- OUTDATA_REG_A                      ; CLOCK0                                                             ;
+;     -- WIDTH_B                            ; 1                                                                  ;
+;     -- NUMWORDS_B                         ; 1                                                                  ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                             ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                       ;
+;     -- RAM_BLOCK_TYPE                     ; M10K                                                               ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                          ;
++-------------------------------------------+--------------------------------------------------------------------+
+
+
 +----------------------------------------------------------------------------------------------+
 ; altpll Parameter Settings by Entity Instance                                                 ;
 +-------------------------------+--------------------------------------------------------------+
@@ -1201,31 +1340,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 293                         ;
+; arriav_ff             ; 315                         ;
 ;     ENA               ; 14                          ;
-;     ENA SCLR          ; 160                         ;
+;     ENA SCLR          ; 176                         ;
 ;     SCLR              ; 63                          ;
-;     plain             ; 56                          ;
+;     plain             ; 62                          ;
 ; arriav_io_obuf        ; 1                           ;
-; arriav_lcell_comb     ; 372                         ;
-;     arith             ; 106                         ;
-;         1 data inputs ; 82                          ;
+; arriav_lcell_comb     ; 498                         ;
+;     arith             ; 122                         ;
+;         1 data inputs ; 98                          ;
 ;         2 data inputs ; 24                          ;
 ;     extend            ; 6                           ;
 ;         7 data inputs ; 6                           ;
-;     normal            ; 260                         ;
+;     normal            ; 370                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 26                          ;
-;         3 data inputs ; 25                          ;
+;         2 data inputs ; 25                          ;
+;         3 data inputs ; 31                          ;
 ;         4 data inputs ; 39                          ;
-;         5 data inputs ; 91                          ;
-;         6 data inputs ; 78                          ;
+;         5 data inputs ; 73                          ;
+;         6 data inputs ; 201                         ;
 ; boundary_port         ; 24                          ;
 ; generic_pll           ; 1                           ;
-; stratixv_ram_block    ; 96                          ;
+; stratixv_ram_block    ; 288                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.50                        ;
-; Average LUT depth     ; 1.86                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 1.92                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1234,7 +1373,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1244,16 +1383,51 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Tue Apr 29 14:57:10 2025
+    Info: Processing started: Thu May 01 22:55:38 2025
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off part1 -c part1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file part1.v
     Info (12023): Found entity 1: part1 File: C:/Users/Egghead/EE371/lab3/part1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rom1port.v
+    Info (12023): Found entity 1: ROM1PORT File: C:/Users/Egghead/EE371/lab3/ROM1PORT.v Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file part2.sv
+    Info (12023): Found entity 1: part2 File: C:/Users/Egghead/EE371/lab3/part2.sv Line: 1
 Info (12127): Elaborating entity "part1" for the top level hierarchy
+Info (12128): Elaborating entity "part2" for hierarchy "part2:task2_inst" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 44
+Warning (10230): Verilog HDL assignment warning at part2.sv(20): truncated value with size 32 to match size of target (16) File: C:/Users/Egghead/EE371/lab3/part2.sv Line: 20
+Info (12128): Elaborating entity "ROM1PORT" for hierarchy "part2:task2_inst|ROM1PORT:rom_inst" File: C:/Users/Egghead/EE371/lab3/part2.sv Line: 11
+Info (12128): Elaborating entity "altsyncram" for hierarchy "part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component" File: C:/Users/Egghead/EE371/lab3/ROM1PORT.v Line: 82
+Info (12130): Elaborated megafunction instantiation "part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component" File: C:/Users/Egghead/EE371/lab3/ROM1PORT.v Line: 82
+Info (12133): Instantiated megafunction "part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/Egghead/EE371/lab3/ROM1PORT.v Line: 82
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "note_data.mif"
+    Info (12134): Parameter "intended_device_family" = "Cyclone V"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "65536"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
+    Info (12134): Parameter "ram_block_type" = "M10K"
+    Info (12134): Parameter "widthad_a" = "16"
+    Info (12134): Parameter "width_a" = "24"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_drh1.tdf
+    Info (12023): Found entity 1: altsyncram_drh1 File: C:/Users/Egghead/EE371/lab3/db/altsyncram_drh1.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_drh1" for hierarchy "part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (48000) in the Memory Initialization File "C:/Users/Egghead/EE371/lab3/note_data.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/Egghead/EE371/lab3/ROM1PORT.v Line: 82
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
+    Info (12023): Found entity 1: decode_61a File: C:/Users/Egghead/EE371/lab3/db/decode_61a.tdf Line: 23
+Info (12128): Elaborating entity "decode_61a" for hierarchy "part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated|decode_61a:rden_decode" File: C:/Users/Egghead/EE371/lab3/db/altsyncram_drh1.tdf Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_bhb.tdf
+    Info (12023): Found entity 1: mux_bhb File: C:/Users/Egghead/EE371/lab3/db/mux_bhb.tdf Line: 23
+Info (12128): Elaborating entity "mux_bhb" for hierarchy "part2:task2_inst|ROM1PORT:rom_inst|altsyncram:altsyncram_component|altsyncram_drh1:auto_generated|mux_bhb:mux2" File: C:/Users/Egghead/EE371/lab3/db/altsyncram_drh1.tdf Line: 42
 Warning (12125): Using design file clock_generator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: clock_generator File: C:/Users/Egghead/EE371/lab3/clock_generator.v Line: 48
-Info (12128): Elaborating entity "clock_generator" for hierarchy "clock_generator:my_clock_gen" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 52
+Info (12128): Elaborating entity "clock_generator" for hierarchy "clock_generator:my_clock_gen" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 76
 Info (12128): Elaborating entity "altpll" for hierarchy "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio" File: C:/Users/Egghead/EE371/lab3/clock_generator.v Line: 134
 Info (12130): Elaborated megafunction instantiation "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio" File: C:/Users/Egghead/EE371/lab3/clock_generator.v Line: 134
 Info (12133): Instantiated megafunction "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio" with the following parameter: File: C:/Users/Egghead/EE371/lab3/clock_generator.v Line: 134
@@ -1318,7 +1492,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/altp
 Info (12128): Elaborating entity "altpll_1uu1" for hierarchy "clock_generator:my_clock_gen|altpll:DE_Clock_Generator_Audio|altpll_1uu1:auto_generated" File: c:/intelfpga_lite/17.0/quartus/libraries/megafunctions/altpll.tdf Line: 898
 Warning (12125): Using design file audio_and_video_config.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: audio_and_video_config File: C:/Users/Egghead/EE371/lab3/audio_and_video_config.v Line: 49
-Info (12128): Elaborating entity "audio_and_video_config" for hierarchy "audio_and_video_config:cfg" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 62
+Info (12128): Elaborating entity "audio_and_video_config" for hierarchy "audio_and_video_config:cfg" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 86
 Warning (12125): Using design file altera_up_slow_clock_generator.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Altera_UP_Slow_Clock_Generator File: C:/Users/Egghead/EE371/lab3/altera_up_slow_clock_generator.v Line: 53
 Info (12128): Elaborating entity "Altera_UP_Slow_Clock_Generator" for hierarchy "audio_and_video_config:cfg|Altera_UP_Slow_Clock_Generator:Clock_Generator_400KHz" File: C:/Users/Egghead/EE371/lab3/audio_and_video_config.v Line: 180
@@ -1330,7 +1504,7 @@ Warning (12125): Using design file altera_up_i2c.v, which is not specified as a 
 Info (12128): Elaborating entity "Altera_UP_I2C" for hierarchy "audio_and_video_config:cfg|Altera_UP_I2C:I2C_Controller" File: C:/Users/Egghead/EE371/lab3/audio_and_video_config.v Line: 252
 Warning (12125): Using design file audio_codec.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: audio_codec File: C:/Users/Egghead/EE371/lab3/audio_codec.v Line: 49
-Info (12128): Elaborating entity "audio_codec" for hierarchy "audio_codec:codec" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 83
+Info (12128): Elaborating entity "audio_codec" for hierarchy "audio_codec:codec" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 107
 Warning (12125): Using design file altera_up_clock_edge.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: Altera_UP_Clock_Edge File: C:/Users/Egghead/EE371/lab3/altera_up_clock_edge.v Line: 48
 Info (12128): Elaborating entity "Altera_UP_Clock_Edge" for hierarchy "audio_codec:codec|Altera_UP_Clock_Edge:Bit_Clock_Edges" File: C:/Users/Egghead/EE371/lab3/audio_codec.v Line: 181
@@ -1388,7 +1562,7 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 6 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 7 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 13 input pin(s) that do not drive logic
+Warning (21074): Design contains 12 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[1]" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 6
     Warning (15610): No output dependent on input pin "KEY[2]" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 6
     Warning (15610): No output dependent on input pin "KEY[3]" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 6
@@ -1401,18 +1575,17 @@ Warning (21074): Design contains 13 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 5
     Warning (15610): No output dependent on input pin "SW[7]" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 5
     Warning (15610): No output dependent on input pin "SW[8]" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 5
-    Warning (15610): No output dependent on input pin "SW[9]" File: C:/Users/Egghead/EE371/lab3/part1.v Line: 5
-Info (21057): Implemented 557 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 881 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
     Info (21059): Implemented 3 output pins
     Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 436 logic cells
-    Info (21064): Implemented 96 RAM segments
+    Info (21061): Implemented 568 logic cells
+    Info (21064): Implemented 288 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4849 megabytes
-    Info: Processing ended: Tue Apr 29 14:57:26 2025
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 28 warnings
+    Info: Peak virtual memory: 4870 megabytes
+    Info: Processing ended: Thu May 01 22:56:05 2025
+    Info: Elapsed time: 00:00:27
+    Info: Total CPU time (on all processors): 00:00:42
 
 

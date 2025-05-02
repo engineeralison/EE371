@@ -25,13 +25,30 @@ module part1 (CLOCK_50, CLOCK2_50, KEY, SW, FPGA_I2C_SCLK, FPGA_I2C_SDAT, AUD_XC
 	
 	// Task 1:
 	
-	assign writedata_left = readdata_left;
-	assign writedata_right = readdata_right;
-	    
-	assign read = read_ready;
-	assign write = write_ready;
-		
+	//assign writedata_left = readdata_left & write_ready;
+	//assign writedata_right = readdata_right & write_ready;
+
+	//assign read = read_ready & write_ready;
+	//assign write = read_ready & write_ready;
+	
 	// Task 2:
+	
+	 wire [23:0] rom_output;
+    wire rom_write_trigger;
+
+    part2 task2_inst (
+        .CLOCK_50(CLOCK_50),
+        .reset(reset),
+        .write(rom_write_trigger),
+        .out(rom_output)
+    );
+	 
+	 // Use SW[9] to choose between passthrough and ROM playback
+    assign writedata_left  = SW[9] ? rom_output     : (readdata_left  & {24{write_ready}});
+    assign writedata_right = SW[9] ? rom_output     : (readdata_right & {24{write_ready}});
+    assign write           = write_ready;
+    assign read            = SW[9] ? read_ready     : (read_ready & write_ready);
+    assign rom_write_trigger = SW[9] ? write_ready : 1'b0;
 	
 	// Task 3:
 	
