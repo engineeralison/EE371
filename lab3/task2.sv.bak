@@ -1,0 +1,9 @@
+module task2 (CLOCK_50, reset, write, out);
+	input logic CLOCK_50, reset, write;
+	output logic [23:0] out;
+	
+	logic [15:0] addr;
+	
+	ROM1PORT rom 
+	
+endmodule 
