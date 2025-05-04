@@ -1,3 +1,9 @@
+/* This top level module passes music through the FPGA, plays a static tone from memory,
+ * and achieves noise filtering through FIR filter. Switch 9 is used to activate the
+ * the static tone from memory and Switch 8 is used to activate the FIR filter.
+ * This module also uses use the audio coder/decoder (CODEC) on the DE1-SoC to generate 
+ * and filter noise from both an external source and an internal memory.
+*/ 
 module part1 (CLOCK_50, CLOCK2_50, KEY, SW, FPGA_I2C_SCLK, FPGA_I2C_SDAT, AUD_XCK, 
 		        AUD_DACLRCK, AUD_ADCLRCK, AUD_BCLK, AUD_ADCDAT, AUD_DACDAT);
 
@@ -23,7 +29,7 @@ module part1 (CLOCK_50, CLOCK2_50, KEY, SW, FPGA_I2C_SCLK, FPGA_I2C_SDAT, AUD_XC
 	// Your code goes here 
 	/////////////////////////////////
 	
-	// Task 1:
+	// Task 1: Passing Music Through the FPGA
 	
 	//assign writedata_left = readdata_left & write_ready;
 	//assign writedata_right = readdata_right & write_ready;
@@ -31,27 +37,47 @@ module part1 (CLOCK_50, CLOCK2_50, KEY, SW, FPGA_I2C_SCLK, FPGA_I2C_SDAT, AUD_XC
 	//assign read = read_ready & write_ready;
 	//assign write = read_ready & write_ready;
 	
-	// Task 2:
+	// Task 2: PLAY A TONE FROM MEMORY
 	
 	 wire [23:0] rom_output;
     wire rom_write_trigger;
 
-    part2 task2_inst (
-        .CLOCK_50(CLOCK_50),
-        .reset(reset),
-        .write(rom_write_trigger),
-        .out(rom_output)
-    );
+    part2 task2_inst (.CLOCK_50(CLOCK_50),.reset(reset),.write(rom_write_trigger),.out(rom_output));
 	 
 	 // Use SW[9] to choose between passthrough and ROM playback
-    assign writedata_left  = SW[9] ? rom_output     : (readdata_left  & {24{write_ready}});
-    assign writedata_right = SW[9] ? rom_output     : (readdata_right & {24{write_ready}});
-    assign write           = write_ready;
-    assign read            = SW[9] ? read_ready     : (read_ready & write_ready);
-    assign rom_write_trigger = SW[9] ? write_ready : 1'b0;
+    //assign writedata_left  = SW[9] ? rom_output     : (readdata_left  & {24{write_ready}});
+    //assign writedata_right = SW[9] ? rom_output     : (readdata_right & {24{write_ready}});
+    //assign write           = write_ready;
+    //assign read            = SW[9] ? read_ready     : (read_ready & write_ready);
+    
+	 // assign rom_write_trigger = SW[9] ? write_ready : 1'b0;
 	
-	// Task 3:
-	
+	// Task 3: FIR FILTER INTEGRATION
+	// Raw sample: SW9 = 0 → passthrough from mic; SW9 = 1 → ROM tone
+	wire [23:0] unfiltered_sample = SW[9] ? rom_output : readdata_left;
+
+	// Convert to signed for FIR filter input
+	wire signed [23:0] unfiltered_signed = unfiltered_sample;
+	wire signed [23:0] filtered_sample;
+
+	// FIR filter instance (Task 3)
+	part3 #(.N(8), .N_LOG2(3)) fir_inst (.clk(CLOCK_50), .reset(reset), .enable(write_ready),.new_sample(unfiltered_signed), .filtered_out(filtered_sample));
+
+	// Final output sample: SW8 = 1 → filtered; SW8 = 0 → unfiltered
+	wire [23:0] output_sample = SW[8] ? (write_ready ? filtered_sample : 24'sd0)
+												 : (unfiltered_sample & {24{write_ready}});
+
+	// Assign to both channels
+	assign writedata_left  = output_sample;
+	assign writedata_right = output_sample;
+
+	// Control read/write
+	assign write = write_ready;
+	assign read  = SW[9] ? read_ready : (read_ready & write_ready);
+
+	// ROM trigger for Task 2
+	assign rom_write_trigger = SW[9] ? write_ready : 1'b0;
+
 /////////////////////////////////////////////////////////////////////////////////
 // Audio CODEC interface. 
 //
@@ -106,6 +132,6 @@ module part1 (CLOCK_50, CLOCK2_50, KEY, SW, FPGA_I2C_SCLK, FPGA_I2C_SDAT, AUD_XC
 		AUD_DACDAT
 	);
 
-endmodule
+endmodule // part 1
 
 
